@@ -1,44 +1,67 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+// components
 import { Link } from "react-router-dom";
-
+import NavbarCollapse from "react-bootstrap/NavbarCollapse";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import NavbarBrand from "react-bootstrap/NavbarBrand";
+import NavMenu from "react-bootstrap/Nav";
+// imgs
 import brandImg from "../../assets/icons/brand.svg";
+// styled-components
+import {
+  Nav,
+  Dropdown,
+  NavItem,
+  NavItemLink,
+  NavToggle,
+  HeaderContainer,
+} from "./styles";
+import { Container } from "../../styles/objects/container";
 
 const Index = () => {
   return (
     <>
-      <header>
-        <Container>
+      <HeaderContainer>
+        <Container fluid>
           <Row>
-            <Col xs="4">
-              <Link to="/" className="brand">
-                <img src={brandImg} href="/" alt="Muzzarella" />
-              </Link>
-            </Col>
-            <Col xs="8">
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="">Menu</Link>
-                  </li>
-                  <li>
-                    <Link to="">About</Link>
-                  </li>
-                  <li>
-                    <Link to="">FAQ</Link>
-                  </li>
-                  <li>
-                    <Link to="">Order</Link>
-                  </li>
-                </ul>
-              </nav>
+            <Col xs="12">
+              <Nav expand="lg" sticky="top">
+                <NavbarBrand>
+                  <Link to="/">
+                    <img src={brandImg} alt="Mozzarella" />
+                  </Link>
+                </NavbarBrand>
+                <NavToggle aria-controls="responsive-navbar-nav" />
+                <NavbarCollapse
+                  id="basic-navbar-nav"
+                  className="justify-content-end"
+                >
+                  <NavMenu>
+                    <NavItem>
+                      <NavItemLink to="/menu">Menu</NavItemLink>
+                    </NavItem>
+                    <Dropdown title="About" id="collasible-nav-dropdown">
+                      <Dropdown.Item>
+                        <Link to="/aboutus">About us</Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link to="/aboutmozzarella">About Mozarrarella</Link>
+                      </Dropdown.Item>
+                    </Dropdown>
+                    <NavItem>
+                      <NavItemLink to="/faq">FAQ</NavItemLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavItemLink to="/order">Order</NavItemLink>
+                    </NavItem>
+                  </NavMenu>
+                </NavbarCollapse>
+              </Nav>
             </Col>
           </Row>
         </Container>
-      </header>
+      </HeaderContainer>
     </>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
-// components
+// routes
 import Index from "./pages/Home/index";
 
 const Routes = () => {

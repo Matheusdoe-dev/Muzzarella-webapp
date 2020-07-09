@@ -6,8 +6,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // img
 import brandImg from "../../assets/icons/brand.svg";
+import facebookImg from "../../assets/icons/facebook.svg";
+import instagramImg from "../../assets/icons/instagram.svg";
+import twitterImg from "../../assets/icons/twitter.svg";
 // styled-components
-import { FooterWrapper } from "./styles";
+import { FooterWrapper, SocialMediasWrapper } from "./styles";
 
 const Footer = () => {
   return (
@@ -46,6 +49,17 @@ const Footer = () => {
           </Col>
           <Col xs="12" sm="4">
             <img src={brandImg} alt="Muzzarella" />
+            <SocialMediasWrapper>
+              <a href="https://facebook.com" target="BLANK">
+                <img src={facebookImg} alt="Facebook" />
+              </a>
+              <a href="https://instagram.com" target="BLANK">
+                <img src={instagramImg} alt="Instagram" />
+              </a>
+              <a href="https://twitter.com" target="BLANK">
+                <img src={twitterImg} alt="Twitter" />
+              </a>
+            </SocialMediasWrapper>
           </Col>
         </Row>
       </Container>

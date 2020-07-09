@@ -30,3 +30,13 @@ export const FooterWrapper = styled.footer`
     }
   }
 `;
+
+export const SocialMediasWrapper = styled.div`
+  & {
+    margin-top: var(--gap-sm);
+
+    a {
+      margin-right: var(--gap);
+    }
+  }
+`;

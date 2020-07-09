@@ -1,5 +1,7 @@
 import styled from "styled-components";
+// imgs
 import heroImg from "../../assets/imgs/bg-main.jpg";
+import footerImg from "../../assets/imgs/footer-img-home.jpg";
 
 export const Hero = styled.div`
   & {
@@ -41,5 +43,12 @@ export const Intro = styled.section`
     img {
       border-radius: 50px;
     }
+  }
+`;
+
+export const FooterImg = styled.div`
+  & {
+    background: url(${footerImg});
+    height: 80px;
   }
 `;

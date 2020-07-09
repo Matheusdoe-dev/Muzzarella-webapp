@@ -1,11 +1,13 @@
 import React from "react";
 // components
-import { Container, Row, Col } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Header from "../../components/Header/index";
 import CTASection from "../../components/CTA-Section/index";
 import Footer from "../../components/Footer/index";
 // style
-import { Hero, Intro } from "./styles";
+import { Hero, Intro, FooterImg } from "./styles";
 // imgs
 import introImg from "../../assets/imgs/home-intro-img.jpg";
 
@@ -58,7 +60,7 @@ const Index = () => {
       </Intro>
 
       <CTASection />
-
+      <FooterImg />
       <Footer />
     </>
   );

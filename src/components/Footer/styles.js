@@ -21,11 +21,12 @@ export const FooterWrapper = styled.footer`
 
       a {
         color: var(--support-color-1);
-      }
-
-      li,
-      a {
         filter: brightness(85%);
+
+        &:hover {
+          color: var(--secondary-color);
+          transition: 0.2s;
+        }
       }
     }
   }

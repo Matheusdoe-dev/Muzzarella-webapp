@@ -53,7 +53,7 @@ const Index = () => {
                       <NavItemLink to="/faq">FAQ</NavItemLink>
                     </NavItem>
                     <NavItem>
-                      <NavItemLink to="/order">Order</NavItemLink>
+                      <NavItemLink to="/order/location">Order</NavItemLink>
                     </NavItem>
                   </NavMenu>
                 </NavbarCollapse>

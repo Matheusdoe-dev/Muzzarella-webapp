@@ -4,7 +4,7 @@ const Elements = createGlobalStyle`
     h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-primary);
         font-weight: 400;
-        line-height: 1.10em;
+        line-height: 1.15em;
     }
 
     h1 {
@@ -32,7 +32,7 @@ const Elements = createGlobalStyle`
         filter: brightness(85%);
     }
 
-    p, textarea {
+    p {
         max-width: 30em;
         line-height: 1.55em;
     }

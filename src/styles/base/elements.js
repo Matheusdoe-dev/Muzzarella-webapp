@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 const Elements = createGlobalStyle`  
+    body {
+        background: var(--support-color-1);
+    }
+    
     h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-primary);
         font-weight: 400;
@@ -23,8 +27,9 @@ const Elements = createGlobalStyle`
         font-size: 1.37rem;
     }
 
-    p, input, label, a, button, textarea {
+    p, input, label, a, button, textarea, span {
         font-family: var(--font-secondary);
+        color: var(--support-color-4);
     }
 
     p, input, label, textarea {

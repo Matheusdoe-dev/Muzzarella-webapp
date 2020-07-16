@@ -20,7 +20,7 @@ const CTASection = () => {
             </p>
           </Col>
           <Col xs="12" sm="3">
-            <CtaButton>Order Now</CtaButton>
+            <CtaButton to="/order/location">Order Now</CtaButton>
           </Col>
         </Row>
       </Container>

@@ -32,6 +32,7 @@ export const OrderLocationWrapper = styled.section`
 
       &:focus {
         outline: none;
+        background: var(--support-color-2);
       }
     }
   }

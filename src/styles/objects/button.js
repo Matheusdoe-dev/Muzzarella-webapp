@@ -3,9 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Button = styled(Link)`
+  display: block;
+  text-align: center;
   background: ${(props) => props.background};
   color: ${(props) => props.color};
-  padding: calc(var(--gap) / 2) var(--gap-lg);
+  padding: calc(var(--gap) / 2) var(--gap);
   border: none;
   border-radius: 50px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.12),
@@ -23,7 +25,7 @@ export const SubmitButton = styled.button`
   & {
     background: ${(props) => props.background};
     color: ${(props) => props.color};
-    padding: 1.375rem var(--gap-sm);
+    padding: calc(var(--gap) / 2) var(--gap);
     width: 100%;
     border: none;
     border-radius: 50px;

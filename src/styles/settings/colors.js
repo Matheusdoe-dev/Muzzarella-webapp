@@ -10,6 +10,7 @@ const Colors = createGlobalStyle`
         --support-color-4: #10212B;
         --support-color-5: #203744;
         --support-color-6: #36505E;
+        --facebook-color: #37528C;
     }
 
 `;

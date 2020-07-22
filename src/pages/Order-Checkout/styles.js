@@ -28,11 +28,8 @@ export const CheckoutWrapper = styled.form`
       }
     }
 
-    input[type="checkbox"] {
-      display: inline-block;
-      width: 43px;
-      height: 43px;
-      margin-right: var(--gap);
+    button {
+      margin-top: var(--gap-sm);
     }
   }
 `;
@@ -62,14 +59,34 @@ export const Checkmark = styled.div`
       background-color: var(--support-color-2);
     }
 
-    & input:checked ~ span {
+    input:checked ~ span {
       background-color: var(--secondary-color);
     }
 
-    & span:after {
+    span:after {
       content: "";
       position: absolute;
       display: none;
+    }
+
+    input:checked ~ span:after {
+      display: block;
+    }
+
+    span:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    p {
+      margin-right: var(--gap-sm);
     }
   }
 
@@ -77,8 +94,8 @@ export const Checkmark = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: 43px;
-    width: 43px;
+    height: 23px;
+    width: 23px;
     background-color: var(--support-color-2);
     border: none;
   }

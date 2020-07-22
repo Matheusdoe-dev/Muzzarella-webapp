@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 // components
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
@@ -7,18 +8,24 @@ import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
 // styled-components
 import { CheckoutWrapper, Checkmark } from "./styles";
-import { Button } from "../../styles/objects/button";
+import { SubmitButton } from "../../styles/objects/button";
 // imgs
-import pageTitleImg from "../../assets/imgs/order/bg-page-customization-way.jpg";
+import pageTitleImg from "../../assets/imgs/order/bg-page-checkout.jpg";
 
 const OrderCheckout = () => {
+  const history = useHistory();
+
+  const handleLocationValidation = () => {
+    history.push("/order/end");
+  };
+
   return (
     <>
       <Header />
-      <PageTitle background={pageTitleImg} title="Order" />
+      <PageTitle background={pageTitleImg} title="Checkout" />
       <Breadcrumbs />
 
-      <CheckoutWrapper>
+      <CheckoutWrapper onSubmit={handleLocationValidation}>
         <Container>
           <Row>
             <Col xs="12" sm="5">
@@ -120,9 +127,19 @@ const OrderCheckout = () => {
                     name="delivey-is-billing-adress"
                   />
                   <span></span>
-                  Delivery same as billing address
+                  <p>Delivery same as billing address</p>
                 </label>
               </Checkmark>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={{ span: 4, offset: 4 }}>
+              <SubmitButton
+                background="var(--base-color)"
+                color="var(--support-color-1)"
+              >
+                Checkout
+              </SubmitButton>
             </Col>
           </Row>
         </Container>

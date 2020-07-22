@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // components
-import Link from "react-router-dom/Link";
+import { Link } from "react-router-dom";
 
 export const BreadcrumbsWrapper = styled.div`
   & {

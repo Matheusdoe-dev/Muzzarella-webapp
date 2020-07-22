@@ -23,7 +23,7 @@ const ChoosePremade = () => {
   return (
     <>
       <Header />
-      <PageTitle background={pageTitleImg} title="Order" />
+      <PageTitle background={pageTitleImg} title="Choose a premade option" />
       <Breadcrumbs />
 
       <ChoosePremadeWrapper>

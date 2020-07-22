@@ -22,7 +22,7 @@ const OrderLocation = () => {
   return (
     <>
       <Header />
-      <PageTitle background={pageTitleImg} title="Frequently Questions" />
+      <PageTitle background={pageTitleImg} title="Check your location" />
 
       <Container>
         <Row>

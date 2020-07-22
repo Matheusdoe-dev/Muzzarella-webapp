@@ -9,13 +9,13 @@ import Breadcrumbs from "../../components/Breadcrumbs/index";
 import { ReviewWrapper } from "./styles";
 import { Button } from "../../styles/objects/button";
 // imgs
-import pageTitleImg from "../../assets/imgs/order/bg-page-choose-premade.jpg";
+import pageTitleImg from "../../assets/imgs/order/bg-page-review.jpg";
 
 const OrderReview = () => {
   return (
     <>
       <Header />
-      <PageTitle background={pageTitleImg} title="Order" />
+      <PageTitle background={pageTitleImg} title="Review your order" />
       <Breadcrumbs />
 
       <ReviewWrapper>

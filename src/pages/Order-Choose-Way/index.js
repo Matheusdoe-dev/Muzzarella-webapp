@@ -15,7 +15,10 @@ const ChooseWay = () => {
   return (
     <>
       <Header />
-      <PageTitle background={pageTitleImg} title="Order" />
+      <PageTitle
+        background={pageTitleImg}
+        title="Choose your customization way"
+      />
       <Breadcrumbs />
 
       <ChooseWrapper>

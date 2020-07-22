@@ -10,7 +10,7 @@ import Breadcrumbs from "../../components/Breadcrumbs/index";
 import { OrderSignInWrapper } from "./styles";
 import { SubmitButton, Button } from "../../styles/objects/button";
 // imgs
-import pageTitleImg from "../../assets/imgs/order/bg-page-choose-premade.jpg";
+import pageTitleImg from "../../assets/imgs/order/bg-page-account.jpg";
 
 const OrderSignIn = () => {
   const history = useHistory();
@@ -22,7 +22,7 @@ const OrderSignIn = () => {
   return (
     <>
       <Header />
-      <PageTitle background={pageTitleImg} title="Order" />
+      <PageTitle background={pageTitleImg} title="Sign in" />
       <Breadcrumbs />
 
       <OrderSignInWrapper>

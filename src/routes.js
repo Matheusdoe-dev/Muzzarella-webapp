@@ -12,6 +12,7 @@ import OrderPremade from "./pages/Order-Premade/index";
 import OrderReview from "./pages/Order-Review/index";
 import OrderSignIn from "./pages/Order-Sign-in/index";
 import OrderCheckout from "./pages/Order-Checkout/index";
+import OrderEnd from "./pages/Order-End/index";
 
 const Routes = () => {
   return (
@@ -29,6 +30,7 @@ const Routes = () => {
         <Route path="/order/review" component={OrderReview} />
         <Route path="/order/signin" component={OrderSignIn} />
         <Route path="/order/checkout" component={OrderCheckout} />
+        <Route path="/order/end" component={OrderEnd} />
       </Switch>
     </BrowserRouter>
   );

@@ -4,30 +4,14 @@ export const AccordionListWrapper = styled.section`
   & {
     padding: var(--gap-xl) 0;
     background: var(--support-color-6);
+    text-align: left;
 
     .card-header,
     .accordion,
     .card {
       background: none;
       border: none;
-    }
-
-    .card {
-      margin-bottom: var(--gap-md);
-
-      &:last-child {
-        margin-bottom: 0 !important;
-      }
-    }
-
-    .btn {
-      text-decoration: none;
-
-      &:hover,
-      &:active {
-        text-decoration: none;
-        outline: none;
-      }
+      text-align: left;
     }
 
     .card-header,
@@ -35,6 +19,15 @@ export const AccordionListWrapper = styled.section`
     .btn {
       padding: 0;
       margin: 0;
+    }
+
+    .card {
+      margin-bottom: var(--gap-md);
+      text-align: left;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
     }
 
     .card-header {
@@ -47,9 +40,20 @@ export const AccordionListWrapper = styled.section`
       margin-bottom: 0;
     }
 
+    .btn {
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: none;
+        outline: none;
+      }
+    }
+
     h4 {
       color: var(--support-color-1);
       margin-bottom: 0;
+      text-align: left;
 
       &::before {
         content: "";

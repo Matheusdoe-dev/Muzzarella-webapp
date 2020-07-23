@@ -4,7 +4,8 @@ export const PageTitleWrapper = styled.div`
   & {
     background: url(${(props) => props.bg});
     background-blend-mode: darken;
-    height: 182px;
+    height: auto;
+    padding: var(--gap-md) 0;
     display: flex;
     justify-content: center;
 
@@ -18,11 +19,13 @@ export const PageTitleWrapper = styled.div`
         width: 30px;
         height: 4px;
         background: var(--support-color-1);
-        margin: var(--gap) auto;
+        margin: var(--gap) auto 0 auto;
       }
     }
-    p {
-      opacity: 80%;
+
+    @media (max-width: 767.98px) {
+      & {
+      }
     }
   }
 `;

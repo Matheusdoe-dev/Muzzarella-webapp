@@ -9,6 +9,10 @@ export const FooterWrapper = styled.footer`
       color: var(--support-color-1);
     }
 
+    img {
+      margin: 0 auto var(--gap) auto;
+    }
+
     ul {
       margin-top: var(--gap-sm);
       list-style: none;
@@ -29,6 +33,12 @@ export const FooterWrapper = styled.footer`
         }
       }
     }
+
+    @media (max-width: 767.98px) {
+      & {
+        text-align: center;
+      }
+    }
   }
 `;
 
@@ -38,6 +48,16 @@ export const SocialMediasWrapper = styled.div`
 
     a {
       margin-right: var(--gap);
+    }
+
+    img {
+      display: inline-block;
+    }
+
+    @media (max-width: 767.98px) {
+      & {
+        margin: 0 auto;
+      }
     }
   }
 `;

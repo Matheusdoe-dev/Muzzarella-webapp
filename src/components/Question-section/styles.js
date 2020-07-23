@@ -23,7 +23,7 @@ export const QuestionWrapper = styled.section`
     input,
     textarea {
       width: 100%;
-      padding: var(--gap) var(--gap-sm);
+      padding: var(--gap) var(--gap-md);
       border: none;
       border-radius: 50px;
       margin-bottom: var(--gap-sm);
@@ -36,23 +36,14 @@ export const QuestionWrapper = styled.section`
 
     textarea {
       height: 140px;
+
+      &::placeholder {
+        margin-top: var(--gap);
+      }
     }
 
     button {
-      padding: calc(var(--gap) / 2) var(--gap-lg);
-      border: none;
-      border-radius: 50px;
-      background: var(--base-color);
-      color: var(--support-color-1);
-      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2),
-        0px 4px 5px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
-      transition: 0.2s;
-
-      :hover {
-        filter: brightness(80%);
-        color: var(--secondary-color);
-        transition: 0.2s;
-      }
+      width: 247px;
     }
   }
 `;

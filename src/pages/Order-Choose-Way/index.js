@@ -24,7 +24,7 @@ const ChooseWay = () => {
       <ChooseWrapper>
         <Container>
           <Row>
-            <Col xs={{ span: 6, offset: 3 }}>
+            <Col xs="12 " sm={{ span: 6, offset: 3 }}>
               <Button
                 background="var(--base-color)"
                 color="var(--support-color-1)"

@@ -29,19 +29,19 @@ const Menu = () => {
               <h4>Customization options</h4>
             </Col>
           </Row>
-          <Row style={{ marginBottom: 41 }}>
-            <Col xs="6">
+          <Row>
+            <Col xs="12" sm="6">
               <img src={option1} alt="Pasta" />
             </Col>
-            <Col xs="6">
+            <Col xs="12" sm="6">
               <img src={option2} alt="Size" />
             </Col>
           </Row>
           <Row>
-            <Col xs="6">
+            <Col xs="12" sm="6">
               <img src={option3} alt="Sauce" />
             </Col>
-            <Col xs="6">
+            <Col xs="12" sm="6">
               <img src={option4} alt="Pizza Topping" />
             </Col>
           </Row>

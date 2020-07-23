@@ -28,7 +28,7 @@ const OrderSignIn = () => {
       <OrderSignInWrapper>
         <Container>
           <Row>
-            <Col xs={{ span: 6, offset: 3 }}>
+            <Col xs="12" sm={{ span: 6, offset: 3 }}>
               <form
                 onSubmit={handleLocationValidation}
                 name="signin"
@@ -54,7 +54,11 @@ const OrderSignIn = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs="12" sm={{ span: 3, offset: 3 }}>
+            <Col
+              xs="12"
+              sm={{ span: 3, offset: 3 }}
+              style={{ marginBottom: "var(--gap-sm)" }}
+            >
               <SubmitButton
                 form="signin"
                 type="submit"

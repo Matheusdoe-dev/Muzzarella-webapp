@@ -16,7 +16,7 @@ const AccordionList = () => {
       <AccordionListWrapper>
         <Container>
           <Row>
-            <Col xs={{ span: 6, offset: 3 }}>
+            <Col xs="12" sm={{ span: 6, offset: 3 }}>
               <Accordion defaultActiveKey="0">
                 <Card>
                   <Card.Header>

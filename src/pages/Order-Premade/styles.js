@@ -11,6 +11,12 @@ export const ChoosePremadeWrapper = styled.section`
         margin-bottom: 0;
       }
     }
+
+    @media (max-width: 767.98px) {
+      .row {
+        margin-bottom: 0;
+      }
+    }
   }
 `;
 
@@ -86,6 +92,12 @@ export const PremadeOption = styled.div`
 
       p {
         margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      & {
+        margin-bottom: var(--gap-md);
       }
     }
   }

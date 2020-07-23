@@ -29,7 +29,7 @@ const ChoosePremade = () => {
       <ChoosePremadeWrapper>
         <Container>
           <Row>
-            <Col xs="6">
+            <Col xs="12 " sm="6">
               <PremadeOption>
                 <img src={premadeMargherita} alt="Margherita" />
                 <label>
@@ -42,7 +42,7 @@ const ChoosePremade = () => {
                 </div>
               </PremadeOption>
             </Col>
-            <Col xs="6">
+            <Col xs="12 " sm="6">
               <PremadeOption>
                 <img src={premadeMozzarella} alt="Mozzarella" />
                 <label>
@@ -57,7 +57,7 @@ const ChoosePremade = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs="6">
+            <Col xs="12 " sm="6">
               <PremadeOption>
                 <img src={premadePepperoni} alt="Pepperoni" />
                 <label>
@@ -73,7 +73,7 @@ const ChoosePremade = () => {
                 </div>
               </PremadeOption>
             </Col>
-            <Col xs="6">
+            <Col xs="12 " sm="6">
               <PremadeOption>
                 <img src={premadeFourCheeses} alt="Four Cheeses" />
                 <label>
@@ -91,7 +91,7 @@ const ChoosePremade = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs="6">
+            <Col xs="12 " sm="6">
               <PremadeOption>
                 <img src={premadePomodoro} alt="Pomodoro" />
                 <label>
@@ -107,7 +107,7 @@ const ChoosePremade = () => {
                 </div>
               </PremadeOption>
             </Col>
-            <Col xs="6">
+            <Col xs="12 " sm="6">
               <PremadeOption>
                 <img src={premadeMarinara} alt="Marinara" />
                 <label>
@@ -122,7 +122,7 @@ const ChoosePremade = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs="6">
+            <Col xs="12 " sm="6">
               <PremadeOption>
                 <img src={premadeCalzone} alt="Calzone" />
                 <label>
@@ -138,8 +138,8 @@ const ChoosePremade = () => {
                 </div>
               </PremadeOption>
             </Col>
-            <Col xs="6">
-              <PremadeOption>
+            <Col xs="12 " sm="6">
+              <PremadeOption style={{ marginBottom: 0 }}>
                 <img src={premadeVegetarian} alt="Vegetarian" />
                 <label>
                   <input type="checkbox" id="vegetarian" name="vegetarian" />
@@ -153,11 +153,12 @@ const ChoosePremade = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={{ span: 4, offset: 4 }}>
+            <Col xs="12" sm={{ span: 4, offset: 4 }}>
               <Button
                 to="/order/review"
                 background="var(--base-color)"
                 color="var(--support-color-1)"
+                style={{ marginTop: "var(--gap-md)" }}
               >
                 Confirm order
               </Button>

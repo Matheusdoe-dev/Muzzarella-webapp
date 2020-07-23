@@ -31,13 +31,13 @@ const Breadcrumbs = () => {
               onClick={handleActiveBreadcrumb}
               to="/order/choose"
             >
-              Customize your order
+              Customize
             </BreadcrumbsItem>
             <BreadcrumbsItem
               onClick={handleActiveBreadcrumb}
               to="/order/review"
             >
-              Review order
+              Review
             </BreadcrumbsItem>
             <BreadcrumbsItem
               onClick={handleActiveBreadcrumb}

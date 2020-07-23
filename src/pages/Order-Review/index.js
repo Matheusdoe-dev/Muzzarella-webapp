@@ -21,14 +21,14 @@ const OrderReview = () => {
       <ReviewWrapper>
         <Container>
           <Row>
-            <Col xs={{ span: 2, offset: 2 }}>
+            <Col sm={{ span: 2, offset: 2 }}>
               <h4>Item</h4>
               <p>Pasta</p>
               <p>Size</p>
               <p>Sauce</p>
               <p>Toppings</p>
             </Col>
-            <Col xs="4">
+            <Col xs="9" sm="4">
               <h4>Description</h4>
               <p>Average</p>
               <p>Family</p>
@@ -40,7 +40,7 @@ const OrderReview = () => {
                 <li>Pepperoni</li>
               </ul>
             </Col>
-            <Col xs="2">
+            <Col xs="3" sm="2">
               <h4>Price</h4>
               <p>£ 8,00</p>
               <p>£ 8,00</p>
@@ -54,15 +54,15 @@ const OrderReview = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={{ span: 4, offset: 4 }}>
+            <Col xs="8" sm={{ span: 4, offset: 4 }}>
               <p>Subtotal</p>
             </Col>
-            <Col xs="2">
+            <Col xs="4" sm="2">
               <p>£ 34,00</p>
             </Col>
           </Row>
           <Row>
-            <Col xs={{ span: 4, offset: 2 }}>
+            <Col xs="6" sm={{ span: 4, offset: 2 }}>
               <Button
                 to="/order/signin"
                 background="var(--base-color)"
@@ -71,7 +71,7 @@ const OrderReview = () => {
                 Checkout
               </Button>
             </Col>
-            <Col xs="4">
+            <Col xs="6" sm="4">
               <Button
                 to="/order/premade"
                 background="var(--support-color-1)"

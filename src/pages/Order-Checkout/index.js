@@ -38,7 +38,7 @@ const OrderCheckout = () => {
                 required
               />
               <Row>
-                <Col xs="4">
+                <Col xs="6" sm="4">
                   <label for="card-validate">Card Valid</label>
                   <input
                     type="text"
@@ -49,7 +49,7 @@ const OrderCheckout = () => {
                     required
                   />
                 </Col>
-                <Col xs="4">
+                <Col xs="6" sm="4">
                   <label for="card-valid">
                     CVV<sup>*</sup>
                   </label>
@@ -133,7 +133,7 @@ const OrderCheckout = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={{ span: 4, offset: 4 }}>
+            <Col xs="12" sm={{ span: 4, offset: 4 }}>
               <SubmitButton
                 background="var(--base-color)"
                 color="var(--support-color-1)"

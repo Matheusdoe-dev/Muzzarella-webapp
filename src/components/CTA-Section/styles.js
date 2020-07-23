@@ -14,9 +14,8 @@ export const CTAWrapper = styled.section`
 
 export const CtaButton = styled(Link)`
   & {
-    display: inline-block;
+    display: block;
     padding: calc(var(--gap) / 2) 0;
-    width: 272px;
     background: var(--base-color);
     color: var(--support-color-1);
     text-align: center;
@@ -29,6 +28,12 @@ export const CtaButton = styled(Link)`
       filter: brightness(80%);
       color: var(--secondary-color);
       transition: 0.2s;
+    }
+
+    @media (max-width: 767.98px) {
+      & {
+        margin: var(--gap) auto 0 auto;
+      }
     }
   }
 `;

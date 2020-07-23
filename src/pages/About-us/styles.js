@@ -4,7 +4,7 @@ import footerImg from "../../assets/imgs/footer-img-aboutus.jpg";
 
 export const AboutUsSection = styled.section`
   & {
-    padding: var(--gap-xl);
+    padding: var(--gap-xl) 0;
 
     h4 {
       margin-bottom: var(--gap-sm);

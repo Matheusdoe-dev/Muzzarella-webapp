@@ -18,7 +18,7 @@ export const OrderLocationWrapper = styled.section`
 
     span {
       margin-top: calc(var(--gap) / 2);
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       filter: brightness(85%);
     }
 

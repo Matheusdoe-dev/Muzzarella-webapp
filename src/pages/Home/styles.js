@@ -23,6 +23,17 @@ export const Hero = styled.div`
       font-size: 1.375rem;
       margin: var(--gap) auto 0 auto;
     }
+
+    @media (max-width: 767.98px) {
+      & {
+        height: auto;
+        padding: var(--gap-xl) 0;
+      }
+
+      & h1 {
+        margin-top: 0;
+      }
+    }
   }
 `;
 
@@ -37,11 +48,17 @@ export const Intro = styled.section`
 
     p,
     h3 {
-      color: var(--base-color);
+      color: var(--support-color-4);
     }
 
     img {
       border-radius: 50px;
+
+      @media (max-width: 767.98px) {
+        & {
+          margin-top: var(--gap);
+        }
+      }
     }
   }
 `;

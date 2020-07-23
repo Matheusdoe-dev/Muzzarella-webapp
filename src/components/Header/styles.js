@@ -63,7 +63,7 @@ export const NavToggle = styled(NavbarToggle)`
   }
 `;
 
-export const HeaderContainer = styled.header`
+export const HeaderWrapper = styled.header`
   & {
     background: var(--base-color);
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.12),

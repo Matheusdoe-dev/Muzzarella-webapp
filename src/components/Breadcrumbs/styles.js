@@ -35,5 +35,11 @@ export const BreadcrumbsItem = styled(Link)`
       color: var(--secondary-color);
       transition: 0.2s;
     }
+
+    @media (max-width: 767.98px) {
+      & {
+        font-size: 0.75rem;
+      }
+    }
   }
 `;

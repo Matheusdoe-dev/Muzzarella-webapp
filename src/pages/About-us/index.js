@@ -22,7 +22,7 @@ const AboutUs = () => {
       <AboutUsSection>
         <Container>
           <Row style={{ marginBottom: 67 }}>
-            <Col xs="6">
+            <Col xs="12" sm="6">
               <h4>Our history</h4>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -38,12 +38,12 @@ const AboutUs = () => {
                 of type and scrambled it
               </p>
             </Col>
-            <Col xs="6">
+            <Col xs="12" sm="6">
               <img src={ourHistoryImg} alt="" />
             </Col>
           </Row>
           <Row>
-            <Col xs="6">
+            <Col xs="12" sm="6">
               <h4>Our history</h4>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -59,7 +59,7 @@ const AboutUs = () => {
                 of type and scrambled it
               </p>
             </Col>
-            <Col xs="6">
+            <Col xs="12" sm="6">
               <img src={ourValuesImg} alt="" />
             </Col>
           </Row>

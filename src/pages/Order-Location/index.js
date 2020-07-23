@@ -35,7 +35,7 @@ const OrderLocation = () => {
       <OrderLocationWrapper>
         <Container>
           <Row>
-            <Col xs={{ span: 6, offset: 3 }}>
+            <Col xs="12" sm={{ span: 6, offset: 3 }}>
               <form onSubmit={handleLocationValidation}>
                 <label htmlFor="location">Your location</label>
                 <input

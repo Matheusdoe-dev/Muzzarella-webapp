@@ -29,7 +29,14 @@ export const CheckoutWrapper = styled.form`
     }
 
     button {
-      margin-top: var(--gap-sm);
+      margin: var(--gap-sm) auto 0 auto;
+
+      @media (max-width: 767.98px) {
+        & {
+          width: 247px;
+          margin: var(--gap-sm) auto 0 auto;
+        }
+      }
     }
   }
 `;

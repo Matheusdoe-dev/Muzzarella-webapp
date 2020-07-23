@@ -33,7 +33,8 @@ export const ReviewWrapper = styled.section`
         border-top: 1px solid var(--support-color-2);
         border-bottom: 1px solid var(--support-color-2);
 
-        div[class^="col-"]:nth-child(2) {
+        div[class^="col-"]:nth-child(2),
+        div[class^="col-"]:last-child {
           h4,
           p,
           li {
@@ -41,11 +42,19 @@ export const ReviewWrapper = styled.section`
           }
         }
 
-        div[class^="col-"]:last-child {
-          h4,
-          p,
-          li {
-            text-align: right;
+        div[class^="col-"]:nth-child(2) {
+          @media (max-width: 767.98px) {
+            h4,
+            p,
+            li {
+              text-align: left;
+            }
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          div[class^="col"]:first-child {
+            display: none;
           }
         }
       }
@@ -55,12 +64,19 @@ export const ReviewWrapper = styled.section`
           margin-bottom: 0;
         }
 
-        div[class^="col"]:first-child p {
+        div[class^="col"]:first-child p,
+        div[class^="col"]:last-child p {
           text-align: right;
         }
 
-        div[class^="col"]:last-child p {
-          text-align: right;
+        @media (max-width: 767.98px) {
+          div[class^="col"]:first-child p {
+            text-align: left;
+          }
+
+          div[class^="col"]:last-child p {
+            text-align: right;
+          }
         }
       }
     }

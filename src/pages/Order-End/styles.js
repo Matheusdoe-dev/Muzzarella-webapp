@@ -14,5 +14,9 @@ export const OrderEndWrapper = styled.form`
       margin-bottom: var(--gap);
       font-size: 1rem;
     }
+
+    span {
+      font-size: 0.75rem;
+    }
   }
 `;

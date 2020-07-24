@@ -54,11 +54,7 @@ const OrderSignIn = () => {
             </Col>
           </Row>
           <Row>
-            <Col
-              xs="12"
-              sm={{ span: 3, offset: 3 }}
-              style={{ marginBottom: "var(--gap-sm)" }}
-            >
+            <Col xs="12" sm={{ span: 3, offset: 3 }}>
               <SubmitButton
                 form="signin"
                 type="submit"

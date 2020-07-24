@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // styled-components
-import { CTAWrapper, CtaButton } from "./styles";
+import { CTAWrapper } from "./styles";
 import { Button } from "../../styles/objects/button";
 
 const CTASection = () => {

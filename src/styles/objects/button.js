@@ -23,10 +23,12 @@ export const Button = styled(Link)`
 
 export const SubmitButton = styled.button`
   & {
+    display: block;
     background: ${(props) => props.background};
     color: ${(props) => props.color};
     padding: calc(var(--gap) / 2) var(--gap);
-    width: 100%;
+    width: ${(props) => (props.width ? props.width : `100%`)};
+    margin: 0 auto;
     border: none;
     border-radius: 50px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.12),

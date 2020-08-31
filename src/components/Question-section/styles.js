@@ -41,9 +41,5 @@ export const QuestionWrapper = styled.section`
         margin-top: var(--gap);
       }
     }
-
-    button {
-      width: 247px;
-    }
   }
 `;

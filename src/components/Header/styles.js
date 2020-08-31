@@ -16,6 +16,10 @@ export const Nav = styled(Navbar)`
 export const NavItem = styled(NavLink)`
   & {
     margin-left: var(--gap);
+
+    @media (max-width: 767.98px) {
+      margin-left: 0;
+    }
   }
 `;
 
@@ -49,6 +53,10 @@ export const Dropdown = styled(NavDropdown)`
         color: var(--secondary-color) !important;
         transition: 0.2s;
       }
+    }
+
+    @media (max-width: 767.98px) {
+      margin-left: 0;
     }
   }
 `;

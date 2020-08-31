@@ -9,9 +9,7 @@ export const FooterWrapper = styled.footer`
       color: var(--support-color-1);
     }
 
-    img {
-      margin: 0 auto var(--gap) auto;
-    }
+    
 
     ul {
       margin-top: var(--gap-sm);
@@ -38,6 +36,10 @@ export const FooterWrapper = styled.footer`
       & {
         text-align: center;
       }
+
+      img {
+        margin: var(--gap) auto var(--gap) auto;
+      }
     }
   }
 `;
@@ -52,6 +54,7 @@ export const SocialMediasWrapper = styled.div`
 
     img {
       display: inline-block;
+      border-radius: 0;
     }
 
     @media (max-width: 767.98px) {

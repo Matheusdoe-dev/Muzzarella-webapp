@@ -13,7 +13,7 @@ export const OurFeaturesSection = styled.section`
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       border-radius: 50px 50px 0 0;
     }
 

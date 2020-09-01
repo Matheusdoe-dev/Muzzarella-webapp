@@ -7,8 +7,9 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Slides from "../../components/Slides/index";
-// style
-import { FooterImg, OurFeaturesSection, FeatureInfo } from "./styles";
+import Card from "../../components/Card";
+// styled-components
+import { FooterImg, OurFeaturesSection } from "./styles";
 // imgs
 import pageTitleImg from "../../assets/imgs/bg-page-title-muzzarella.jpg";
 import featureImg1 from "../../assets/imgs/feature-img-1.jpg";
@@ -30,25 +31,28 @@ const AboutMuzzarella = () => {
           </Row>
           <Row>
             <Col xs="12" sm="4">
-              <img src={featureImg1} alt="" />
-              <FeatureInfo>
-                <h4>Fast Delivery</h4>
-                <p>Lorem ipsum is simply dummy text of the</p>
-              </FeatureInfo>
+              <Card
+                image={featureImg1}
+                alt="Fast Delivery"
+                title="Fast Delivery"
+                subtitle="Lorem ipsum is simply dummy text of the"
+              />
             </Col>
             <Col xs="12" sm="4">
-              <img src={featureImg2} alt="" />
-              <FeatureInfo>
-                <h4>Order at your home</h4>
-                <p>Lorem ipsum is simply dummy text of the</p>
-              </FeatureInfo>
+              <Card
+                image={featureImg2}
+                alt="Order at your home"
+                title="Order at your home"
+                subtitle="Lorem ipsum is simply dummy text of the"
+              />
             </Col>
             <Col xs="12" sm="4">
-              <img src={featureImg3} alt="" />
-              <FeatureInfo>
-                <h4>Customize your order</h4>
-                <p>Lorem ipsum is simply dummy text of the</p>
-              </FeatureInfo>
+              <Card
+                image={featureImg3}
+                alt="Customize your order"
+                title="Customize your order"
+                subtitle="Lorem ipsum is simply dummy text of the"
+              />
             </Col>
           </Row>
         </Container>

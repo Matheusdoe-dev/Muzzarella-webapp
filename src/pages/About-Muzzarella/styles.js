@@ -12,11 +12,6 @@ export const OurFeaturesSection = styled.section`
       text-align: center;
     }
 
-    img {
-      width: 100%;
-      border-radius: 50px 50px 0 0;
-    }
-
     @media (max-width: 767.98px) {
       .row:last-child div[class^="col"] {
         margin-bottom: var(--gap-sm);
@@ -25,20 +20,6 @@ export const OurFeaturesSection = styled.section`
           margin-bottom: 0;
         }
       }
-    }
-  }
-`;
-
-export const FeatureInfo = styled.div`
-  & {
-    background: var(--support-color-5);
-    padding: var(--gap-sm);
-    text-align: center;
-    border-radius: 0 0 50px 50px;
-
-    h4,
-    p {
-      color: var(--support-color-1);
     }
   }
 `;

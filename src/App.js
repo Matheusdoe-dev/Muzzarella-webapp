@@ -9,7 +9,7 @@ import Gaps from "./styles/settings/gaps";
 import Container from "./styles/generic/container";
 import Elements from "./styles/base/elements";
 
-function App() {
+const App = () => {
   return (
     <>
       <Colors />
@@ -21,6 +21,6 @@ function App() {
       <Routes />
     </>
   );
-}
+};
 
 export default App;

@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
 // styled-components
 import { AccordionListWrapper } from "./styles";
 

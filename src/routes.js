@@ -6,6 +6,7 @@ import Menu from "./pages/Menu/index";
 import AboutUs from "./pages/About-us/index";
 import AboutMuzzarella from "./pages/About-Muzzarella/index";
 import FAQ from "./pages/FAQ/index";
+//// order routes
 import OrderLocation from "./pages/Order-Location/index";
 import OrderChooseWay from "./pages/Order-Choose-Way/index";
 import OrderPremade from "./pages/Order-Premade/index";

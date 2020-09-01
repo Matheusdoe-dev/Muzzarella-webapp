@@ -7,7 +7,7 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import CTASection from "../../components/CTA-Section/index";
 import Footer from "../../components/Footer/index";
-// style
+// styled-components
 import { FooterImg, CustomizationSection } from "./styles";
 // imgs
 import pageTitleImg from "../../assets/imgs/bg-page-title-menu.jpg";

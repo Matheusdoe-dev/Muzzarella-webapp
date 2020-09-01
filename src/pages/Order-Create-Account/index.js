@@ -9,7 +9,7 @@ import Breadcrumbs from "../../components/Breadcrumbs/index";
 import Input from "../../components/Input";
 // styled-components
 import { OrderSignInWrapper } from "./styles";
-import { SubmitButton, Button } from "../../styles/objects/button";
+import { SubmitButton } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-account.jpg";
 

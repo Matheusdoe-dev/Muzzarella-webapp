@@ -44,7 +44,7 @@ const Index = () => {
                         <Link to="/aboutus">About us</Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link to="/aboutmuzzarella">About Mozarrarella</Link>
+                        <Link to="/aboutmuzzarella">About Muzzarella</Link>
                       </Dropdown.Item>
                     </Dropdown>
                     <NavItem>

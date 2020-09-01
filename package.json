@@ -1,13 +1,19 @@
 {
-  "name": "Muzzarella-api",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "muzzarella-api",
+  "version": "0.0.1",
+  "main": "src/server/server.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "dev": "nodemon src/server/server.js"
+  },
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.21.5",
+    "sqlite3": "^5.0.0"
   }
 }

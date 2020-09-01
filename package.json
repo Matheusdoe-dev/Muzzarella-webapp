@@ -5,7 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/server/server.js",
-    "dev": "nodemon src/server/server.js"
+    "dev": "nodemon src/server/server.js",
+    "knex:migrate": "knex --knexfile knexfile.js migrate:latest",
+    "knex:migrate:rollback": "knex --knexfile knexfile.js migrate:rollback",
+    "knex:seed": "knex --knexfile knexfile.js seed:run"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

@@ -6,6 +6,7 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import Input from "../../components/Input";
 // styled-components
 import { CheckoutWrapper, Checkmark } from "./styles";
 import { SubmitButton } from "../../styles/objects/button";
@@ -29,36 +30,23 @@ const OrderCheckout = () => {
         <Container>
           <Row>
             <Col xs="12" sm="5">
-              <label for="card-number">Card Number</label>
-              <input
-                type="number"
-                name="card-number"
-                id="card-number"
-                placeholder="Enter your card number"
-                required
-              />
+              <Input type="number" name="card-number" label="Card Number" />
+
               <Row>
                 <Col xs="6" sm="4">
-                  <label for="card-validate">Card Valid</label>
-                  <input
-                    type="text"
-                    name="card-number"
-                    id="card-number"
+                  <Input
+                    name="card-validate"
+                    label="Card Valid"
+                    maxLength="5"
                     placeholder="mm/yy"
-                    maxLength="4"
-                    required
                   />
                 </Col>
                 <Col xs="6" sm="4">
-                  <label for="card-valid">
-                    CVV<sup>*</sup>
-                  </label>
-                  <input
+                  <Input
                     type="number"
                     name="card-valid"
-                    id="card-valid"
+                    label="CVV"
                     maxLength="3"
-                    required
                   />
                 </Col>
               </Row>
@@ -66,54 +54,19 @@ const OrderCheckout = () => {
             <Col xs="12" sm={{ span: 6, offset: 1 }}>
               <Row>
                 <Col xs="6">
-                  <label for="first-name">First Name</label>
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    placeholder="Enter your first name"
-                    required
-                  />
+                  <Input name="first-name" label="First Name" />
                 </Col>
                 <Col xs="6">
-                  <label for="last-name">Last Name</label>
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    placeholder="Enter your last name"
-                    required
-                  />
+                  <Input name="last-name" label="Last Name" />
                 </Col>
               </Row>
-              <label for="billing-adress">Billing Adress</label>
-              <input
-                type="text"
-                name="billing-adress"
-                id="billing-adress"
-                placeholder="Enter your billing adress"
-                required
-              />
+              <Input name="billing-adress" label="Billing Adress" />
               <Row>
                 <Col xs="6">
-                  <label for="city">City</label>
-                  <input
-                    type="text"
-                    name="city"
-                    id="city"
-                    placeholder="Enter your city name"
-                    required
-                  />
+                  <Input name="city" label="City" />
                 </Col>
                 <Col xs="6">
-                  <label for="zip-code">Zip code</label>
-                  <input
-                    type="number"
-                    name="zip-code"
-                    id="zip-code"
-                    placeholder="Enter your zip code"
-                    required
-                  />
+                  <Input name="zip-code" label="Zip code" />
                 </Col>
               </Row>
               <Checkmark>

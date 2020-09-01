@@ -6,6 +6,7 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import Input from "../../components/Input";
 // styled-components
 import { OrderSignInWrapper } from "./styles";
 import { SubmitButton, Button } from "../../styles/objects/button";
@@ -34,22 +35,8 @@ const OrderSignIn = () => {
                 name="signin"
                 id="signin"
               >
-                <label htmlFor="email">E-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                />
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Enter your email"
-                  required
-                />
+                <Input type="email" name="email" label="E-mail" />
+                <Input type="password" name="password" label="Password" />
               </form>
             </Col>
           </Row>
@@ -71,31 +58,6 @@ const OrderSignIn = () => {
                 to="/order/signup"
               >
                 Create a account
-              </Button>
-            </Col>
-          </Row>
-          <Row>
-            <Col
-              xs="12"
-              sm={{ span: 6, offset: 3 }}
-              style={{ marginBottom: "var(--gap-sm)" }}
-            >
-              <span>or</span>
-              <Button
-                background="var(--facebook-color)"
-                color="var(--support-color-3)"
-                to="/order/premade"
-              >
-                Login with Facebook
-              </Button>
-            </Col>
-            <Col xs="12" sm={{ span: 6, offset: 3 }}>
-              <Button
-                background="var(--support-color-1)"
-                color="var(--support-color-4)"
-                to="/order/premade"
-              >
-                Login with Google
               </Button>
             </Col>
           </Row>

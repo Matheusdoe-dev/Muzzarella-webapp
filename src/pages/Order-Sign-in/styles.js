@@ -4,30 +4,6 @@ export const OrderSignInWrapper = styled.section`
   & {
     padding: var(--gap-xl) 0;
 
-    input,
-    label {
-      display: block;
-    }
-
-    label {
-      font-size: 1.375rem;
-      margin-bottom: var(-gap);
-    }
-
-    input {
-      background: var(--support-color-1);
-      border-radius: 50px;
-      width: 100%;
-      padding: var(--gap);
-      border: none;
-      margin-bottom: var(--gap-sm);
-
-      &:focus {
-        outline: none;
-        background: var(--support-color-2);
-      }
-    }
-
     a,
     span {
       display: block;

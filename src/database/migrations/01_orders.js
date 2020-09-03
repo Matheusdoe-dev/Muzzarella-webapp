@@ -4,13 +4,13 @@ exports.up = (knex) => {
   return knex.schema.createTable("orders", (table) => {
     table.increments("order_id").primary();
 
-    // table
-    //   .integer("order_user_id")
-    //   .notNullable()
-    //   .references("user_id")
-    //   .inTable("users")
-    //   .onUpdate("CASCADE")
-    //   .onDelete("CASCADE");
+    table
+      .integer("user_id")
+      .notNullable()
+      .references("id")
+      .inTable("users")
+      .onUpdate("CASCADE")
+      .onDelete("CASCADE");
 
     table.string("first_name").notNullable();
     table.string("last_name").notNullable();

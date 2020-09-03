@@ -5,7 +5,6 @@ const OrderController = {
   async create(req, res) {
     try {
       const {
-        user_id,
         card_number,
         card_valid,
         cvv,
@@ -17,8 +16,9 @@ const OrderController = {
         price,
       } = await req.body;
 
+      // order
       const order = {
-        user_id,
+        user_id: req.userId,
         card_number,
         card_valid,
         cvv,
@@ -30,19 +30,23 @@ const OrderController = {
         price,
       };
 
+      // inserting order data on orders migration
       const insertedOrders = await knex("orders").insert(order);
 
+      // getting inserted order id
       const orderId = insertedOrders[0];
 
-      return res.json({ orderId });
+      return res.json({ orderId, user: req.userId });
     } catch (error) {
       console.log(error);
       return res.json({ error });
     }
   },
 
+  // index all orders functionality
   async indexAll(req, res) {
     try {
+      // get all orders from migration
       const orders = await knex("orders").select("*");
 
       return res.json([...orders]);

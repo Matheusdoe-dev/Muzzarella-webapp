@@ -3,9 +3,11 @@ const routes = express.Router();
 // controllers
 const OrderController = require("./controllers/OrderController");
 const UserController = require("./controllers/UserController");
+// middlewares
+const authMiddleware = require("./middlewares/auth");
 
 // create order
-routes.post("/orders", OrderController.create);
+routes.post("/orders", authMiddleware, OrderController.create);
 
 // index all orders
 routes.get("/orders", OrderController.indexAll);

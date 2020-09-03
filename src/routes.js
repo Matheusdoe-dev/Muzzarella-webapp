@@ -16,4 +16,7 @@ routes.post("/users", UserController.create);
 // index all users
 routes.get("/users", UserController.indexAll);
 
+// user authentication
+routes.post("/user-authentication", UserController.userAuthentication);
+
 module.exports = routes;

@@ -4,17 +4,16 @@ exports.up = (knex) => {
   return knex.schema.createTable("order_items", (table) => {
     table.increments("id").primary();
 
+    table.string("item").notNullable();
+    table.string("type").notNullable();
+
     table
       .integer("order_id")
       .notNullable()
-      .references("order_id")
-      .inTable("orders");
-
-    table
-      .integer("item_id")
-      .notNullable()
-      .references("item_id")
-      .inTable("items");
+      .references("id")
+      .inTable("orders")
+      .onUpdate("CASCADE")
+      .onDelete("CASCADE");
   });
 };
 

@@ -14,7 +14,10 @@ const OrderController = {
         city,
         zip,
         price,
+        items,
       } = await req.body;
+
+      const trx = await knex.transaction();
 
       // order
       const order = {
@@ -31,15 +34,31 @@ const OrderController = {
       };
 
       // inserting order data on orders migration
-      const insertedOrders = await knex("orders").insert(order);
+      const insertedOrders = await trx("orders").insert(order);
 
       // getting inserted order id
-      const orderId = insertedOrders[0];
+      const orderId = (
+        await trx.select("id").from("orders").where("user_id", order.user_id)
+      )[0].id;
+
+      // serializing order items
+      const orderItem = items.map((item) => {
+        return {
+          ...item,
+          order_id: orderId,
+        };
+      });
+
+      // inserting order items on database
+      await trx("order_items").insert(orderItem);
+
+      // commit all database changes
+      await trx.commit();
 
       return res.json({ orderId, user: req.userId });
     } catch (error) {
+      return res.status(400).json({ error: "Order create error" });
       console.log(error);
-      return res.json({ error });
     }
   },
 
@@ -51,8 +70,8 @@ const OrderController = {
 
       return res.json([...orders]);
     } catch (error) {
+      return res.status(400).send({ error: "Index all orders error" });
       console.log(error);
-      return res.json({ error });
     }
   },
 };

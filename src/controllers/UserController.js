@@ -1,5 +1,7 @@
-const knex = require("../database/connection");
 const bcrypt = require("bcryptjs");
+// database connection
+const knex = require("../database/connection");
+// utils
 const generateToken = require("../utils/generateToken");
 
 const UserController = {

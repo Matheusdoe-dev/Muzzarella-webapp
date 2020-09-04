@@ -2,7 +2,7 @@ const knex = require("knex");
 
 exports.up = (knex) => {
   return knex.schema.createTable("orders", (table) => {
-    table.increments("order_id").primary();
+    table.increments("id").primary();
 
     table
       .integer("user_id")

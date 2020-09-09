@@ -4,12 +4,9 @@
   "main": "src/server/server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node --ignore tests src/server/server.js",
-    "dev": "nodemon --ignore tests src/server/server.js",
-    "knex:migrate": "knex --knexfile knexfile.js migrate:latest",
-    "knex:migrate:rollback": "knex --knexfile knexfile.js migrate:rollback",
-    "knex:seed": "knex --knexfile knexfile.js seed:run",
-    "test": "jest"
+    "start": "NODE_ENV=production node src/server/server.js",
+    "dev": "NODE_ENV=dev nodemon --ignore tests src/server/server.js",
+    "test": "NODE_ENV=test jest"
   },
   "devDependencies": {
     "jest": "^26.4.2",
@@ -20,6 +17,7 @@
     "bcryptjs": "^2.4.3",
     "celebrate": "^12.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.5",

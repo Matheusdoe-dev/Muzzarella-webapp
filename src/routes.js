@@ -1,8 +1,8 @@
 const express = require("express");
 const routes = express.Router();
 // controllers
-const OrderController = require("./controllers/OrderController");
-const UserController = require("./controllers/UserController");
+const OrderController = require("./app/controllers/OrderController");
+const UserController = require("./app/controllers/UserController");
 // middlewares
 const authMiddleware = require("./middlewares/auth");
 const { celebrate, Segments, Joi } = require("celebrate");

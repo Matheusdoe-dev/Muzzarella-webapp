@@ -1,4 +1,4 @@
-const knex = require("../database/connection");
+const { Order, Order_items } = require("../models");
 
 const OrderController = {
   // create order funcionality
@@ -17,8 +17,6 @@ const OrderController = {
         items,
       } = await req.body;
 
-      const trx = await knex.transaction();
-
       // order
       const order = {
         user_id: req.userId,
@@ -34,31 +32,24 @@ const OrderController = {
       };
 
       // inserting order data on orders migration
-      const insertedOrders = await trx("orders").insert(order);
+      const insertedOrders = await Order.create(order);
 
       // getting inserted order id
-      const orderId = (
-        await trx.select("id").from("orders").where("user_id", order.user_id)
-      )[0].id;
+      const orderId = insertedOrders.id;
 
-      // serializing order items
-      const orderItem = items.map((item) => {
-        return {
-          ...item,
+      // creating order items modals
+      items.forEach(async (item) => {
+        await Order_items.create({
+          item: item.item,
+          type: item.type,
           order_id: orderId,
-        };
+        });
       });
-
-      // inserting order items on database
-      await trx("order_items").insert(orderItem);
-
-      // commit all database changes
-      await trx.commit();
 
       return res.json({ orderId, user: req.userId });
     } catch (error) {
-      return res.status(400).json({ error: "Order create error" });
       console.log(error);
+      return res.status(400).json({ error: "Order create error" });
     }
   },
 
@@ -66,12 +57,12 @@ const OrderController = {
   async indexAll(req, res) {
     try {
       // get all orders from migration
-      const orders = await knex("orders").select("*");
+      const orders = await Order.findAll();
 
       return res.json([...orders]);
     } catch (error) {
-      return res.status(400).send({ error: "Index all orders error" });
       console.log(error);
+      return res.status(400).send({ error: "Index all orders error" });
     }
   },
 };

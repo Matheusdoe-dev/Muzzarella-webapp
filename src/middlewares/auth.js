@@ -9,6 +9,7 @@ module.exports = (req, res, next) => {
     return res.status(401).send({ error: "No token provided" });
   }
 
+  // spliting authorization header in two parts
   const parts = authHeader.split(" ");
 
   // checks if the authorization follows the patern schema + token , 2 parts
@@ -16,6 +17,7 @@ module.exports = (req, res, next) => {
     return res.status(401).send({ error: "Token error" });
   }
 
+  // destructuring parts array
   const [scheme, token] = parts;
 
   // checks the format of the scheme

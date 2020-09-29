@@ -1,4 +1,5 @@
 const { Order, Order_items } = require("../models");
+const sequelize = require("sequelize");
 
 const OrderController = {
   // create order funcionality
@@ -31,20 +32,26 @@ const OrderController = {
         price,
       };
 
+      const transaction  = await sequelize.transaction()
+
       // inserting order data on orders migration
-      const insertedOrders = await Order.create(order);
+      const insertedOrders = await Order.create(order, { transaction });
 
       // getting inserted order id
       const orderId = insertedOrders.id;
 
       // creating order items modals
-      items.forEach(async (item) => {
-        await Order_items.create({
-          item: item.item,
-          type: item.type,
-          order_id: orderId,
-        });
-      });
+      await Promise.all(
+        items.map( async item => {
+          await Order_items.create({
+            item: item.item,
+            type: item.type,
+            order_id: orderId,
+          }, { transaction });
+        })
+      );
+
+      await transaction.commit();
 
       return res.json({ orderId, user: req.userId });
     } catch (error) {

@@ -8,8 +8,8 @@
     "dev": "NODE_ENV=dev nodemon --ignore tests src/server/server.js",
     "sequelize:migrate": "NODE_ENV=dev sequelize db:migrate",
     "sequelize:rollback": "NODE_ENV=dev sequelize db:migrate:undo:all",
-    "pretest": "NODE_ENV=test sequelize db:migrate",
-    "test": "NODE_ENV=test jest",
+    "pretest": "set NODE_ENV=test && sequelize db:migrate",
+    "test": "set NODE_ENV=test && jest",
     "posttest": "NODE_ENV=test sequelize db:migrate:undo:all && rm --force ./tests/database.sqlite"
   },
   "devDependencies": {

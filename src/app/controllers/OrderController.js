@@ -1,5 +1,4 @@
-const { Order, Order_items } = require("../models");
-const sequelize = require("sequelize");
+const { Order, Order_items, sequelize } = require("../models");
 
 const OrderController = {
   // create order funcionality

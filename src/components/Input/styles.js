@@ -25,5 +25,18 @@ export const InputWrapper = styled.div`
       font-size: 1.375rem;
       margin-bottom: var(-gap);
     }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: var(--danger);
+      }
+    }
+
+    .error {
+      border: 1px solid var(--danger);
+    }
   }
 `;

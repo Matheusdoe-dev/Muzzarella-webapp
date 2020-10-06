@@ -8,17 +8,29 @@ import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
 import Input from "../../components/Input";
 // styled-components
-import { OrderSignInWrapper } from "./styles";
+import { OrderSignInWrapper, Error } from "./styles";
 import { SubmitButton } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-account.jpg";
+// hooks
+import useCreateAccountHook from "../../hooks/create-account";
 
 const OrderSignIn = () => {
-  const history = useHistory();
-
-  const handleLocationValidation = () => {
-    history.push("/order/checkout");
-  };
+  const {
+    confirmEmail,
+    confirmPassword,
+    email,
+    name,
+    password,
+    setConfirmEmail,
+    setConfirmPassword,
+    setEmail,
+    setName,
+    setPassword,
+    handleCreateAccount,
+    errorEmail,
+    errorPassword,
+  } = useCreateAccountHook();
 
   return (
     <>
@@ -30,22 +42,45 @@ const OrderSignIn = () => {
         <Container>
           <Row>
             <Col xs="12" sm={{ span: 6, offset: 3 }}>
-              <form
-                onSubmit={handleLocationValidation}
-                name="signin"
-                id="signin"
-              >
-                <Input type="email" name="email" label="E-mail" />
+              <form onSubmit={handleCreateAccount} name="signin" id="signin">
+                <Input
+                  type="name"
+                  name="name"
+                  label="Name"
+                  value={name}
+                  setValue={setName}
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  label="E-mail"
+                  value={email}
+                  setValue={setEmail}
+                  error={errorEmail}
+                />
                 <Input
                   type="email"
                   name="confirm-email"
                   label="Confirm your E-mail"
+                  value={confirmEmail}
+                  setValue={setConfirmEmail}
+                  error={errorEmail}
                 />
-                <Input type="password" name="password" label="Password" />
+                <Input
+                  type="password"
+                  name="password"
+                  label="Password"
+                  value={password}
+                  setValue={setPassword}
+                  error={errorPassword}
+                />
                 <Input
                   type="password"
                   name="confirm-password"
                   label="Confirm your Password"
+                  value={confirmPassword}
+                  setValue={setConfirmPassword}
+                  error={errorPassword}
                 />
               </form>
             </Col>

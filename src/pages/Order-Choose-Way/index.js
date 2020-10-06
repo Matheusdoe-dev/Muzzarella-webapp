@@ -10,8 +10,12 @@ import { ChooseWrapper } from "./styles";
 import { Button } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-customization-way.jpg";
+// hooks
+import useOrderHook from "../../hooks/order";
 
 const ChooseWay = () => {
+  const { handleOrderWay, orderWay } = useOrderHook();
+
   return (
     <>
       <Header />
@@ -24,10 +28,11 @@ const ChooseWay = () => {
       <ChooseWrapper>
         <Container>
           <Row>
-            <Col xs="12 " sm={{ span: 6, offset: 3 }}>
+            <Col xs="12" sm={{ span: 6, offset: 3 }}>
               <Button
                 background="var(--base-color)"
                 color="var(--support-color-1)"
+                onClick={handleOrderWay}
                 to="/order/customize"
               >
                 Customize your order
@@ -36,6 +41,7 @@ const ChooseWay = () => {
               <Button
                 background="var(--support-color-1)"
                 color="var(--support-color-4)"
+                onClick={handleOrderWay}
                 to="/order/premade"
               >
                 Select premade options

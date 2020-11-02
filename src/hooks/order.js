@@ -1,14 +1,21 @@
-import { useState } from "react";
+import React, { useState, createContext } from "react";
 import { useHistory } from "react-router-dom";
 // apis
 import muzzarellaApi from "../services/muzzarella-api";
 
-const useOrderHook = () => {
+// order context create
+export const OrderContext = createContext();
+
+// custom order hook
+const useOrder = () => {
   // order way
   const [orderWay, setOrderWay] = useState("");
 
-  // order checkout data
+  // order items and total price
   const [items, setItems] = useState([]);
+  const [price, setPrice] = useState("R$ 32,00");
+
+  // order checkout data
   const [card_number, setCardNumber] = useState("");
   const [card_valid, setCardValid] = useState("");
   const [cvv, setCVV] = useState("");
@@ -17,7 +24,6 @@ const useOrderHook = () => {
   const [adress, setAdress] = useState("");
   const [city, setCity] = useState("");
   const [zip, setZipCode] = useState("");
-  const [price, setPrice] = useState("R$ 32,00");
 
   const history = useHistory();
 
@@ -103,4 +109,8 @@ const useOrderHook = () => {
   };
 };
 
-export default useOrderHook;
+export const Order = ({ children }) => {
+  return (
+    <OrderContext.Provider value={useOrder()}>{children}</OrderContext.Provider>
+  );
+};

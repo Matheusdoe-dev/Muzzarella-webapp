@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // components
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
@@ -11,29 +11,11 @@ import { CheckoutWrapper, Checkmark } from "./styles";
 import { SubmitButton } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-checkout.jpg";
-// hooks
-import useOrderHook from "../../hooks/order";
+// contexts
+import { OrderContext } from "../../hooks/order";
 
 const OrderCheckout = () => {
-  const {
-    card_number,
-    setCardNumber,
-    card_valid,
-    setCardValid,
-    cvv,
-    setCVV,
-    first_name,
-    setFirstName,
-    last_name,
-    setLastName,
-    adress,
-    setAdress,
-    city,
-    setCity,
-    zip,
-    setZipCode,
-    handleSubmitOrder,
-  } = useOrderHook();
+  const orderContext = useContext(OrderContext);
 
   return (
     <>
@@ -41,15 +23,15 @@ const OrderCheckout = () => {
       <PageTitle background={pageTitleImg} title="Checkout" />
       <Breadcrumbs />
 
-      <CheckoutWrapper onSubmit={handleSubmitOrder}>
+      <CheckoutWrapper onSubmit={orderContext.handleSubmitOrder}>
         <Container>
           <Row>
             <Col xs="12" sm="5">
               <Input
                 name="card-number"
                 label="Card Number"
-                value={card_number}
-                setValue={setCardNumber}
+                value={orderContext.card_number}
+                setValue={orderContext.setCardNumber}
                 required
               />
 
@@ -60,8 +42,8 @@ const OrderCheckout = () => {
                     label="Card Valid"
                     maxLength="5"
                     placeholder="mm/yy"
-                    value={card_valid}
-                    setValue={setCardValid}
+                    value={orderContext.card_valid}
+                    setValue={orderContext.setCardValid}
                     required
                   />
                 </Col>
@@ -71,8 +53,8 @@ const OrderCheckout = () => {
                     name="card-valid"
                     label="CVV"
                     maxLength="3"
-                    value={cvv}
-                    setValue={setCVV}
+                    value={orderContext.cvv}
+                    setValue={orderContext.setCVV}
                     required
                   />
                 </Col>
@@ -84,8 +66,8 @@ const OrderCheckout = () => {
                   <Input
                     name="first-name"
                     label="First Name"
-                    value={first_name}
-                    setValue={setFirstName}
+                    value={orderContext.first_name}
+                    setValue={orderContext.setFirstName}
                     required
                   />
                 </Col>
@@ -93,8 +75,8 @@ const OrderCheckout = () => {
                   <Input
                     name="last-name"
                     label="Last Name"
-                    value={last_name}
-                    setValue={setLastName}
+                    value={orderContext.last_name}
+                    setValue={orderContext.setLastName}
                     required
                   />
                 </Col>
@@ -102,8 +84,8 @@ const OrderCheckout = () => {
               <Input
                 name="billing-adress"
                 label="Billing Adress"
-                value={adress}
-                setValue={setAdress}
+                value={orderContext.adress}
+                setValue={orderContext.setAdress}
                 required
               />
               <Row>
@@ -111,8 +93,8 @@ const OrderCheckout = () => {
                   <Input
                     name="city"
                     label="City"
-                    value={city}
-                    setValue={setCity}
+                    value={orderContext.city}
+                    setValue={orderContext.setCity}
                     required
                   />
                 </Col>
@@ -120,8 +102,8 @@ const OrderCheckout = () => {
                   <Input
                     name="zip-code"
                     label="Zip code"
-                    value={zip}
-                    setValue={setZipCode}
+                    value={orderContext.zip}
+                    setValue={orderContext.setZipCode}
                     required
                   />
                 </Col>

@@ -12,8 +12,12 @@ import { SubmitButton } from "../../styles/objects/button";
 import { OrderLocationWrapper } from "./styles";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-location.jpg";
+// hooks
+import useLocationHook from "../../hooks/location";
 
 const OrderLocation = () => {
+  const { location, setLocation } = useLocationHook();
+
   const history = useHistory();
 
   const handleLocationValidation = () => {
@@ -38,7 +42,12 @@ const OrderLocation = () => {
           <Row>
             <Col xs="12" sm={{ span: 6, offset: 3 }}>
               <form onSubmit={handleLocationValidation}>
-                <Input name="adress" label="Your location" />
+                <Input
+                  name="adress"
+                  label="Your location"
+                  value={location}
+                  setValue={setLocation}
+                />
 
                 <SubmitButton
                   type="submit"

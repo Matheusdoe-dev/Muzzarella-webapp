@@ -36,6 +36,10 @@ export const BreadcrumbsItem = styled(Link)`
       transition: 0.2s;
     }
 
+    &.inactive {
+      display: none;
+    }
+
     @media (max-width: 767.98px) {
       & {
         font-size: 0.75rem;

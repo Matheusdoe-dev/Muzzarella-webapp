@@ -19,12 +19,8 @@ import premadeMozzarella from "../../assets/imgs/order/premade-mozzarella.jpg";
 import premadePepperoni from "../../assets/imgs/order/premade-pepperoni.jpg";
 import premadePomodoro from "../../assets/imgs/order/premade-pomodoro.jpg";
 import premadeVegetarian from "../../assets/imgs/order/premade-vegetarian.jpg";
-// hooks
-import useOrderHook from "../../hooks/order";
 
 const ChoosePremade = () => {
-  const { handleItems, handleChecked } = useOrderHook();
-
   return (
     <>
       <Header />
@@ -41,10 +37,6 @@ const ChoosePremade = () => {
                 image={premadeMargherita}
                 description="Tomato, olive oil, mozzarella cheese and basil"
                 value="Margherita"
-                checked={handleChecked()}
-                onChange={(event) =>
-                  handleItems(event, event.currentTarget.value, "Premade")
-                }
               />
             </Col>
             <Col xs="12 " sm="6">
@@ -54,7 +46,6 @@ const ChoosePremade = () => {
                 image={premadeMozzarella}
                 description="Tomato, mozzarella cheese, oregano and black olives"
                 value="Mozzarella"
-                onChange={handleItems}
               />
             </Col>
           </Row>
@@ -67,7 +58,6 @@ const ChoosePremade = () => {
                 description="Tomato, mozzarella cheese, pepperoni, salami, slices and
                 black olives"
                 value="Pepperoni"
-                onChange={handleItems}
               />
             </Col>
             <Col xs="12 " sm="6">
@@ -78,7 +68,6 @@ const ChoosePremade = () => {
                 description="Tomato, mozzarella cheese, gorgonzola, parmesan, provolone,
                 catupiry and black olives"
                 value="Four Cheeses"
-                onChange={handleItems}
               />
             </Col>
           </Row>
@@ -91,7 +80,6 @@ const ChoosePremade = () => {
                 description="Tomato, mozzarella cheese and grated parmesan, garlic and
                 black olives"
                 value="Pomodoro"
-                onChange={handleItems}
               />
             </Col>
             <Col xs="12" sm="6">
@@ -101,7 +89,6 @@ const ChoosePremade = () => {
                 image={premadeMarinara}
                 description="Tomato, olive oil, oregano and garlic"
                 value="Marinara"
-                onChange={handleItems}
               />
             </Col>
           </Row>
@@ -114,7 +101,6 @@ const ChoosePremade = () => {
                 description="Ricotta cheese, special mozzarella cheese, olive oil and
                 salami"
                 value="Calzone"
-                onChange={handleItems}
               />
             </Col>
             <Col xs="12 " sm="6">
@@ -125,14 +111,13 @@ const ChoosePremade = () => {
                 image={premadeVegetarian}
                 description="Stewed peppers, zucchini, artichoke hearts and spinach"
                 value="Vegetarian"
-                onChange={handleItems}
               />
             </Col>
           </Row>
           <Row>
             <Col xs="12" sm={{ span: 4, offset: 4 }}>
               <Button
-                to="/order/review"
+                to="/order/signin"
                 background="var(--base-color)"
                 color="var(--support-color-1)"
                 style={{ marginTop: "var(--gap-md)" }}

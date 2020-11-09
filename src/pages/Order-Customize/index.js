@@ -22,14 +22,14 @@ const OrderCustomize = () => {
       <PageTitle background={pageTitleImg} title="Choose a premade option" />
       <Breadcrumbs />
 
-      <OrderCustomizeWrapper onSubmit={() => history.push("/order/review")}>
+      <OrderCustomizeWrapper onSubmit={() => history.push("/order/signin")}>
         <Container>
           <Row>
             <Col xs="12">
               <h4>Pasta</h4>
             </Col>
             <CheckboxList
-              name="pasta"
+              name="Pasta"
               type="radio"
               options={[
                 { name: "slim", label: "Slim" },
@@ -43,7 +43,7 @@ const OrderCustomize = () => {
               <h4>Size</h4>
             </Col>
             <CheckboxList
-              name="size"
+              name="Size"
               type="radio"
               options={[
                 { name: "small", label: "Small" },
@@ -58,7 +58,7 @@ const OrderCustomize = () => {
               <h4>Sauce</h4>
             </Col>
             <CheckboxList
-              name="sauce"
+              name="Sauce"
               type="checkbox"
               options={[
                 { name: "traditional-tomato", label: "Traditional Tomato" },
@@ -72,7 +72,7 @@ const OrderCustomize = () => {
               <h4>Pizza Topping</h4>
             </Col>
             <CheckboxList
-              name="topping"
+              name="Topping"
               type="checkbox"
               options={[
                 { name: "mozzarella", label: "Mozzarella" },

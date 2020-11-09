@@ -33,7 +33,6 @@ export const PremadeOptionWrapper = styled.div`
       height: 27px;
       border: 3px solid var(--support-color-4);
       background: none;
-      border-radius: 50%;
     }
 
     label:hover input ~ span {

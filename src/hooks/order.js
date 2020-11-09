@@ -1,5 +1,4 @@
 import React, { useState, createContext } from "react";
-import { useHistory } from "react-router-dom";
 // apis
 import muzzarellaApi from "../services/muzzarella-api";
 
@@ -25,8 +24,7 @@ const useOrder = () => {
   const [city, setCity] = useState("");
   const [zip, setZipCode] = useState("");
 
-  const history = useHistory();
-
+  // handle user order preference
   const handleOrderWay = (event) => {
     if (event.target.innerHTML.includes("Customize")) {
       setOrderWay("customize");
@@ -35,51 +33,60 @@ const useOrder = () => {
     }
   };
 
-  const handleItems = (event, value, type) => {
-    if (event.currentTarget.checked === true) {
-      setItems([...items, { item: value, type: type }]);
-    } else {
-      setItems(items.filter((item) => item.item !== value));
+  // handle order items
+  const handleItems = (event, value, type, inputType) => {
+    switch (inputType) {
+      case "checkbox": {
+        if (event.currentTarget.checked === true) {
+          setItems([...items, { item: value, type: type }]);
+        } else {
+          setItems(items.filter((item) => item.item !== value));
+        }
+
+        break;
+      }
+
+      case "radio": {
+        if (items.find((item) => item.type === type)) {
+          const itemsUpdated = items.filter((item) => item.type !== type);
+
+          setItems([...itemsUpdated, { item: value, type: type }]);
+        } else {
+          setItems([...items, { item: value, type: type }]);
+        }
+      }
     }
+
     console.log(items);
   };
 
-  const handleChecked = (value, data) => {
-    return data.includes(value);
+  // handle checkbox checked
+  const handleChecked = (value) => {
+    return items.find((item) => item.item === value);
   };
 
   // handle order submit function
-  const handleSubmitOrder = async (event) => {
-    event.preventDefault();
-
-    try {
-      await muzzarellaApi
-        .post(
-          "/orders",
-          {
-            items,
-            card_number,
-            card_valid,
-            cvv,
-            first_name,
-            last_name,
-            adress,
-            city,
-            zip,
-            price,
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          }
-        )
-        .then((r) => r.data);
-      alert("Order created, thanks to use our services!");
-      history.push("/order/end");
-    } catch (error) {
-      alert("Unable to create order, try again.");
-    }
+  const handleSubmitOrder = () => {
+    return muzzarellaApi.post(
+      "/orders",
+      {
+        items,
+        card_number,
+        card_valid,
+        cvv,
+        first_name,
+        last_name,
+        adress,
+        city,
+        zip,
+        price,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    );
   };
 
   return {

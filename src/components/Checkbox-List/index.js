@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 // components
 import { Col } from "react-bootstrap";
 // styles
 import { Checkmark } from "./styles";
+// contexts
+import { OrderContext } from "../../hooks/order";
 
 const CheckboxList = ({ options, name, type, ...props }) => {
+  // contexts
+  const orderContext = useContext(OrderContext);
+
   return (
     <>
       {options.map((option) => (
@@ -16,6 +21,11 @@ const CheckboxList = ({ options, name, type, ...props }) => {
                 id={option.name}
                 name={name}
                 value={option.name}
+                checked={orderContext?.handleChecked(option.name)}
+                onChange={(event) =>
+                  orderContext?.handleItems(event, option.label, name, type)
+                }
+                {...props}
               />
               <span className={type}></span>
               <p>{option.label}</p>

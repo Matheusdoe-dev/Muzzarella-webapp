@@ -28,13 +28,6 @@ const Breadcrumbs = () => {
             </BreadcrumbsItem>
             <BreadcrumbsItem
               data-anime="breadcrumbs"
-              to="/order/review"
-              className="inactive"
-            >
-              Review
-            </BreadcrumbsItem>
-            <BreadcrumbsItem
-              data-anime="breadcrumbs"
               to="/order/signin"
               className="inactive"
             >

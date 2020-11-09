@@ -5,49 +5,38 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // styled-components
 import { BreadcrumbsWrapper, BreadcrumbsItem } from "./styles";
+// hooks
+import useBreadcrumbs from "../../hooks/breadcrumbs";
 
 const Breadcrumbs = () => {
-  const handleActiveBreadcrumb = (event) => {
-    const breadcrumbs = document.querySelectorAll("a");
-    breadcrumbs.forEach((breadcrumb) => {
-      breadcrumb.classList.remove("active");
-    });
-    event.currentTarget.classList.add("active");
-  };
+  useBreadcrumbs();
 
   return (
     <BreadcrumbsWrapper>
       <Container>
         <Row>
           <Col xs="12">
-            <BreadcrumbsItem
-              onClick={handleActiveBreadcrumb}
-              to="/order/location"
-              className="active"
-            >
+            <BreadcrumbsItem data-anime="breadcrumbs" to="/order/location">
               Location
             </BreadcrumbsItem>
             <BreadcrumbsItem
-              onClick={handleActiveBreadcrumb}
+              data-anime="breadcrumbs"
               to="/order/choose"
+              className="inactive"
             >
               Customize
             </BreadcrumbsItem>
             <BreadcrumbsItem
-              onClick={handleActiveBreadcrumb}
-              to="/order/review"
-            >
-              Review
-            </BreadcrumbsItem>
-            <BreadcrumbsItem
-              onClick={handleActiveBreadcrumb}
+              data-anime="breadcrumbs"
               to="/order/signin"
+              className="inactive"
             >
               Sign in
             </BreadcrumbsItem>
             <BreadcrumbsItem
-              onClick={handleActiveBreadcrumb}
+              data-anime="breadcrumbs"
               to="/order/checkout"
+              className="inactive"
             >
               Checkout
             </BreadcrumbsItem>

@@ -10,10 +10,6 @@ export const OrderSignInWrapper = styled.section`
       text-align: center;
     }
 
-    span {
-      margin: var(--gap-sm) auto;
-    }
-
     .row:nth-child(2) {
       @media (max-width: 767.98px) {
         div[class^="col"]:first-child {

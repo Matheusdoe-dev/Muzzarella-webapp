@@ -6,13 +6,18 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import Input from "../../components/Input";
 // styled-components
 import { SubmitButton } from "../../styles/objects/button";
 import { OrderLocationWrapper } from "./styles";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-location.jpg";
+// hooks
+import useLocationHook from "../../hooks/location";
 
 const OrderLocation = () => {
+  const { location, setLocation } = useLocationHook();
+
   const history = useHistory();
 
   const handleLocationValidation = () => {
@@ -37,14 +42,13 @@ const OrderLocation = () => {
           <Row>
             <Col xs="12" sm={{ span: 6, offset: 3 }}>
               <form onSubmit={handleLocationValidation}>
-                <label htmlFor="location">Your location</label>
-                <input
-                  type="adress"
-                  id="location"
-                  name="location"
-                  placeholder="Enter your location"
-                  required
+                <Input
+                  name="adress"
+                  label="Your location"
+                  value={location}
+                  setValue={setLocation}
                 />
+
                 <SubmitButton
                   type="submit"
                   color="var(--support-color-1)"

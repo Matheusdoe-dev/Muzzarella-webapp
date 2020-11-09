@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Header from "../../components/Header/index";
 import CTASection from "../../components/CTA-Section/index";
 import Footer from "../../components/Footer/index";
-// style
+// styled-components
 import { Hero, Intro, FooterImg } from "./styles";
 // imgs
 import introImg from "../../assets/imgs/home-intro-img.jpg";

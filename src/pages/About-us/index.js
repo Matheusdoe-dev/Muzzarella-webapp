@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
-// style
+// styled-components
 import { FooterImg, AboutUsSection } from "./styles";
 // imgs
 import pageTitleImg from "../../assets/imgs/bg-page-title-aboutus.jpg";

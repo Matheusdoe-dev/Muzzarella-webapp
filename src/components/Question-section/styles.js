@@ -13,37 +13,5 @@ export const QuestionWrapper = styled.section`
       text-align: center;
       margin-bottom: var(--gap-md);
     }
-
-    label,
-    input,
-    textarea {
-      display: block;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: var(--gap) var(--gap-md);
-      border: none;
-      border-radius: 50px;
-      margin-bottom: var(--gap-sm);
-
-      &:focus {
-        outline: none;
-        background: var(--support-color-2);
-      }
-    }
-
-    textarea {
-      height: 140px;
-
-      &::placeholder {
-        margin-top: var(--gap);
-      }
-    }
-
-    button {
-      width: 247px;
-    }
   }
 `;

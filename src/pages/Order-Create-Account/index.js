@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 // components
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
@@ -9,20 +8,28 @@ import Breadcrumbs from "../../components/Breadcrumbs/index";
 import Input from "../../components/Input";
 // styled-components
 import { OrderSignInWrapper } from "./styles";
-import { SubmitButton, Button } from "../../styles/objects/button";
+import { SubmitButton } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-account.jpg";
 // hooks
-import useAuthentication from "../../hooks/authentication";
+import useCreateAccountHook from "../../hooks/create-account";
 
 const OrderSignIn = () => {
   const {
+    confirmEmail,
+    confirmPassword,
     email,
-    setEmail,
+    name,
     password,
+    setConfirmEmail,
+    setConfirmPassword,
+    setEmail,
+    setName,
     setPassword,
-    handleAuthenticationSubmit,
-  } = useAuthentication();
+    handleCreateAccount,
+    errorEmail,
+    errorPassword,
+  } = useCreateAccountHook();
 
   return (
     <>
@@ -34,17 +41,29 @@ const OrderSignIn = () => {
         <Container>
           <Row>
             <Col xs="12" md={{ span: 6, offset: 3 }}>
-              <form
-                name="signin"
-                id="signin"
-                onSubmit={handleAuthenticationSubmit}
-              >
+              <form onSubmit={handleCreateAccount} name="signin" id="signin">
+                <Input
+                  type="name"
+                  name="name"
+                  label="Name"
+                  value={name}
+                  setValue={setName}
+                />
                 <Input
                   type="email"
                   name="email"
                   label="E-mail"
                   value={email}
                   setValue={setEmail}
+                  error={errorEmail}
+                />
+                <Input
+                  type="email"
+                  name="confirm-email"
+                  label="Confirm your E-mail"
+                  value={confirmEmail}
+                  setValue={setConfirmEmail}
+                  error={errorEmail}
                 />
                 <Input
                   type="password"
@@ -52,29 +71,29 @@ const OrderSignIn = () => {
                   label="Password"
                   value={password}
                   setValue={setPassword}
+                  error={errorPassword}
+                />
+                <Input
+                  type="password"
+                  name="confirm-password"
+                  label="Confirm your Password"
+                  value={confirmPassword}
+                  setValue={setConfirmPassword}
+                  error={errorPassword}
                 />
               </form>
             </Col>
           </Row>
           <Row>
-            <Col xs="12" md={{ span: 3, offset: 3 }}>
+            <Col xs="12" md={{ span: 6, offset: 3 }}>
               <SubmitButton
                 form="signin"
                 type="submit"
                 color="var(--support-color-1)"
                 background="var(--base-color)"
               >
-                Sign in
+                Create your account
               </SubmitButton>
-            </Col>
-            <Col xs="12" md="3">
-              <Button
-                background="var(--support-color-1)"
-                color="var(--support-color-4)"
-                to="/order/create-account"
-              >
-                Sign up
-              </Button>
             </Col>
           </Row>
         </Container>

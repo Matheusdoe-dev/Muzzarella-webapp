@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+// hoos
 import { useHistory } from "react-router-dom";
 // components
 import { Container, Row, Col } from "react-bootstrap";
@@ -6,18 +7,19 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import Input from "../../components/Input";
 // styled-components
 import { CheckoutWrapper, Checkmark } from "./styles";
 import { SubmitButton } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-checkout.jpg";
+// contexts
+import { OrderContext } from "../../hooks/order";
 
 const OrderCheckout = () => {
-  const history = useHistory();
+  const orderContext = useContext(OrderContext);
 
-  const handleLocationValidation = () => {
-    history.push("/order/end");
-  };
+  const history = useHistory();
 
   return (
     <>
@@ -25,93 +27,101 @@ const OrderCheckout = () => {
       <PageTitle background={pageTitleImg} title="Checkout" />
       <Breadcrumbs />
 
-      <CheckoutWrapper onSubmit={handleLocationValidation}>
+      <CheckoutWrapper
+        onSubmit={async (event) => {
+          event.preventDefault();
+
+          await orderContext
+            ?.handleSubmitOrder()
+            .then(() => {
+              alert("Order created, thanks to use our services!");
+              history.push("/order/end");
+            })
+            .catch(() => {
+              alert("Unable to create order, try again.");
+            });
+        }}
+      >
         <Container>
           <Row>
-            <Col xs="12" sm="5">
-              <label for="card-number">Card Number</label>
-              <input
-                type="number"
+            <Col xs="12" md="6">
+              <Input
                 name="card-number"
-                id="card-number"
-                placeholder="Enter your card number"
+                label="Card Number"
+                value={orderContext.card_number}
+                setValue={orderContext.setCardNumber}
                 required
               />
+
               <Row>
                 <Col xs="6" sm="4">
-                  <label for="card-validate">Card Valid</label>
-                  <input
-                    type="text"
-                    name="card-number"
-                    id="card-number"
+                  <Input
+                    name="card-validate"
+                    label="Card Valid"
+                    maxLength="5"
                     placeholder="mm/yy"
-                    maxLength="4"
+                    value={orderContext.card_valid}
+                    setValue={orderContext.setCardValid}
                     required
                   />
                 </Col>
                 <Col xs="6" sm="4">
-                  <label for="card-valid">
-                    CVV<sup>*</sup>
-                  </label>
-                  <input
+                  <Input
                     type="number"
                     name="card-valid"
-                    id="card-valid"
+                    label="CVV"
                     maxLength="3"
+                    value={orderContext.cvv}
+                    setValue={orderContext.setCVV}
                     required
                   />
                 </Col>
               </Row>
             </Col>
-            <Col xs="12" sm={{ span: 6, offset: 1 }}>
+            <Col xs="12" md="6">
               <Row>
                 <Col xs="6">
-                  <label for="first-name">First Name</label>
-                  <input
-                    type="text"
+                  <Input
                     name="first-name"
-                    id="first-name"
-                    placeholder="Enter your first name"
+                    label="First Name"
+                    value={orderContext.first_name}
+                    setValue={orderContext.setFirstName}
                     required
                   />
                 </Col>
                 <Col xs="6">
-                  <label for="last-name">Last Name</label>
-                  <input
-                    type="text"
+                  <Input
                     name="last-name"
-                    id="last-name"
-                    placeholder="Enter your last name"
+                    label="Last Name"
+                    value={orderContext.last_name}
+                    setValue={orderContext.setLastName}
                     required
                   />
                 </Col>
               </Row>
-              <label for="billing-adress">Billing Adress</label>
-              <input
-                type="text"
+              <Input
                 name="billing-adress"
-                id="billing-adress"
-                placeholder="Enter your billing adress"
+                label="Billing Adress"
+                value={orderContext.adress}
+                setValue={orderContext.setAdress}
                 required
               />
               <Row>
                 <Col xs="6">
-                  <label for="city">City</label>
-                  <input
-                    type="text"
+                  <Input
                     name="city"
-                    id="city"
-                    placeholder="Enter your city name"
+                    label="City"
+                    value={orderContext.city}
+                    setValue={orderContext.setCity}
                     required
                   />
                 </Col>
                 <Col xs="6">
-                  <label for="zip-code">Zip code</label>
-                  <input
-                    type="number"
+                  <Input
                     name="zip-code"
-                    id="zip-code"
-                    placeholder="Enter your zip code"
+                    label="Zip code"
+                    value={orderContext.zip}
+                    setValue={orderContext.setZipCode}
                     required
                   />
                 </Col>

@@ -20,11 +20,11 @@ import {
 const Index = () => {
   return (
     <>
-      <HeaderWrapper id="Header">
+      <HeaderWrapper>
         <Container>
           <Row>
             <Col xs="12">
-              <Nav expand="lg" sticky="top">
+              <Nav expand="lg" variant="dark">
                 <NavbarBrand>
                   <Link to="/">
                     <img src={brandImg} alt="Mozzarella" />
@@ -44,7 +44,7 @@ const Index = () => {
                         <Link to="/aboutus">About us</Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link to="/aboutmuzzarella">About Mozarrarella</Link>
+                        <Link to="/aboutmuzzarella">About Muzzarella</Link>
                       </Dropdown.Item>
                     </Dropdown>
                     <NavItem>

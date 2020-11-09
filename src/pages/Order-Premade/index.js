@@ -5,8 +5,9 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import PremadeOption from "../../components/Premade-option";
 // styled-components
-import { ChoosePremadeWrapper, PremadeOption } from "./styles";
+import { ChoosePremadeWrapper } from "./styles";
 import { Button } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-choose-premade.jpg";
@@ -30,132 +31,93 @@ const ChoosePremade = () => {
         <Container>
           <Row>
             <Col xs="12 " sm="6">
-              <PremadeOption>
-                <img src={premadeMargherita} alt="Margherita" />
-                <label>
-                  <input type="checkbox" id="margherita" name="margherita" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Margherita</h4>
-                  <p>Tomato, olive oil, mozzarella cheese and basil</p>
-                </div>
-              </PremadeOption>
+              <PremadeOption
+                alt="Margherita"
+                name="margherita"
+                image={premadeMargherita}
+                description="Tomato, olive oil, mozzarella cheese and basil"
+                value="Margherita"
+              />
             </Col>
             <Col xs="12 " sm="6">
-              <PremadeOption>
-                <img src={premadeMozzarella} alt="Mozzarella" />
-                <label>
-                  <input type="checkbox" id="mozzarella" name="mozzarella" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Mozzarella</h4>
-                  <p>Tomato, mozzarella cheese, oregano and black olives</p>
-                </div>
-              </PremadeOption>
+              <PremadeOption
+                alt="Mozzarella"
+                name="mozzarella"
+                image={premadeMozzarella}
+                description="Tomato, mozzarella cheese, oregano and black olives"
+                value="Mozzarella"
+              />
             </Col>
           </Row>
           <Row>
             <Col xs="12 " sm="6">
-              <PremadeOption>
-                <img src={premadePepperoni} alt="Pepperoni" />
-                <label>
-                  <input type="checkbox" id="pepperoni" name="pepperoni" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Pepperoni</h4>
-                  <p>
-                    Tomato, mozzarella cheese, pepperoni, salami, slices and
-                    black olives
-                  </p>
-                </div>
-              </PremadeOption>
+              <PremadeOption
+                alt="Pepperoni"
+                name="pepperoni"
+                image={premadePepperoni}
+                description="Tomato, mozzarella cheese, pepperoni, salami, slices and
+                black olives"
+                value="Pepperoni"
+              />
             </Col>
             <Col xs="12 " sm="6">
-              <PremadeOption>
-                <img src={premadeFourCheeses} alt="Four Cheeses" />
-                <label>
-                  <input type="checkbox" id="fourcheeses" name="fourcheeses" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Four Cheeses</h4>
-                  <p>
-                    Tomato, mozzarella cheese, gorgonzola, parmesan, provolone,
-                    catupiry and black olives
-                  </p>
-                </div>
-              </PremadeOption>
+              <PremadeOption
+                alt="Four Cheeses"
+                name="fourcheeses"
+                image={premadeFourCheeses}
+                description="Tomato, mozzarella cheese, gorgonzola, parmesan, provolone,
+                catupiry and black olives"
+                value="Four Cheeses"
+              />
             </Col>
           </Row>
           <Row>
             <Col xs="12 " sm="6">
-              <PremadeOption>
-                <img src={premadePomodoro} alt="Pomodoro" />
-                <label>
-                  <input type="checkbox" id="pomodoro" name="pomodoro" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Pomodoro</h4>
-                  <p>
-                    Tomato, mozzarella cheese and grated parmesan, garlic and
-                    black olives
-                  </p>
-                </div>
-              </PremadeOption>
+              <PremadeOption
+                alt="Pomodoro"
+                name="pomodoro"
+                image={premadePomodoro}
+                description="Tomato, mozzarella cheese and grated parmesan, garlic and
+                black olives"
+                value="Pomodoro"
+              />
             </Col>
-            <Col xs="12 " sm="6">
-              <PremadeOption>
-                <img src={premadeMarinara} alt="Marinara" />
-                <label>
-                  <input type="checkbox" id="marinara" name="marinara" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Marinara</h4>
-                  <p>Tomato, olive oil, oregano and garlic</p>
-                </div>
-              </PremadeOption>
+            <Col xs="12" sm="6">
+              <PremadeOption
+                alt="Marinara"
+                name="marinara"
+                image={premadeMarinara}
+                description="Tomato, olive oil, oregano and garlic"
+                value="Marinara"
+              />
             </Col>
           </Row>
           <Row>
             <Col xs="12 " sm="6">
-              <PremadeOption>
-                <img src={premadeCalzone} alt="Calzone" />
-                <label>
-                  <input type="checkbox" id="calzone" name="calzone" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Calzone</h4>
-                  <p>
-                    Ricotta cheese, special mozzarella cheese, olive oil and
-                    salami
-                  </p>
-                </div>
-              </PremadeOption>
+              <PremadeOption
+                alt="Calzone"
+                name="calzone"
+                image={premadeCalzone}
+                description="Ricotta cheese, special mozzarella cheese, olive oil and
+                salami"
+                value="Calzone"
+              />
             </Col>
             <Col xs="12 " sm="6">
-              <PremadeOption style={{ marginBottom: 0 }}>
-                <img src={premadeVegetarian} alt="Vegetarian" />
-                <label>
-                  <input type="checkbox" id="vegetarian" name="vegetarian" />
-                  <span></span>
-                </label>
-                <div>
-                  <h4>Vegetarian</h4>
-                  <p>Stewed peppers, zucchini, artichoke hearts and spinach</p>
-                </div>
-              </PremadeOption>
+              <PremadeOption
+                style={{ marginBottom: 0 }}
+                alt="Vegetarian"
+                name="vegetarian"
+                image={premadeVegetarian}
+                description="Stewed peppers, zucchini, artichoke hearts and spinach"
+                value="Vegetarian"
+              />
             </Col>
           </Row>
           <Row>
             <Col xs="12" sm={{ span: 4, offset: 4 }}>
               <Button
-                to="/order/review"
+                to="/order/signin"
                 background="var(--base-color)"
                 color="var(--support-color-1)"
                 style={{ marginTop: "var(--gap-md)" }}

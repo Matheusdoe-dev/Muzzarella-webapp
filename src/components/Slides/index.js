@@ -8,7 +8,7 @@ import slidesImg1 from "../../assets/imgs/slides-image-1.jpg";
 import slidesImg2 from "../../assets/imgs/slides-image-2.jpg";
 import slidesImg3 from "../../assets/imgs/slides-image-3.jpg";
 import slidesImg4 from "../../assets/imgs/slides-image-4.jpg";
-// styled
+// styled-components
 import { SlidesWrapper } from "./styles";
 
 const Slides = () => {

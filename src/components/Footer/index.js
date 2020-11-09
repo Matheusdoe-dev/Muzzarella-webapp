@@ -1,4 +1,6 @@
 import React from "react";
+// hooks
+import useScrollToTop from "../../hooks/scroll-to-top";
 // components
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
@@ -13,6 +15,8 @@ import twitterImg from "../../assets/icons/twitter.svg";
 import { FooterWrapper, SocialMediasWrapper } from "./styles";
 
 const Footer = () => {
+  useScrollToTop();
+
   return (
     <FooterWrapper>
       <Container>

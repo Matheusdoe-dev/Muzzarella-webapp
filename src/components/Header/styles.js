@@ -36,38 +36,43 @@ export const NavItemLink = styled(Link)`
 `;
 
 export const Dropdown = styled(NavDropdown)`
-  & a.dropdown-toggle {
-    color: var(--support-color-1) !important;
-    margin-left: var(--gap);
-    transition: 0.2s;
-
-    :hover {
-      color: var(--secondary-color) !important;
-      transition: 0.2s;
-    }
-
-    .dropdown-menu .dropdown-item {
+  & {
+    a.dropdown-toggle {
+      color: var(--support-color-1) !important;
+      margin-left: var(--gap);
       transition: 0.2s;
 
       :hover {
         color: var(--secondary-color) !important;
         transition: 0.2s;
       }
+
+      @media (max-width: 767.98px) {
+        margin-left: 0;
+      }
     }
 
-    @media (max-width: 767.98px) {
-      margin-left: 0;
+    .dropdown-item {
+      :active {
+        background: var(--support-color-5) !important;
+      }
+
+      a {
+        color: var();
+        transition: 0.2s;
+
+        :hover {
+          color: var(--secondary-color) !important;
+          transition: 0.2s;
+        }
+      }
     }
   }
 `;
 
 export const NavToggle = styled(NavbarToggle)`
   & {
-    border: none;
-
-    span {
-      border-color: var(--support-color-1);
-    }
+    border-color: var(--support-color-1);
   }
 `;
 

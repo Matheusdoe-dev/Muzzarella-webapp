@@ -20,11 +20,11 @@ import {
 const Index = () => {
   return (
     <>
-      <HeaderWrapper id="Header">
+      <HeaderWrapper>
         <Container>
           <Row>
             <Col xs="12">
-              <Nav expand="lg" sticky="top">
+              <Nav expand="lg" variant="dark">
                 <NavbarBrand>
                   <Link to="/">
                     <img src={brandImg} alt="Mozzarella" />

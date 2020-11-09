@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 const useBreadcrumbs = () => {
@@ -7,15 +7,36 @@ const useBreadcrumbs = () => {
   const { pathname } = history.location;
 
   useEffect(() => {
-    const breadcrumbs = document.querySelectorAll('[data-anime="breadcrumbs"]');
+    const breadcrumbs = Array.from(
+      document.querySelectorAll('[data-anime="breadcrumbs"]')
+    );
+    let key = false;
 
-    breadcrumbs.forEach((breadcrumb) => {
-      breadcrumb.classList.remove("active");
+    breadcrumbs.forEach((breadcrumb, index) => {
+      if (key === false && breadcrumb.classList.contains("inactive")) {
+        breadcrumb.classList.remove("inactive");
+      }
+
+      if (
+        pathname === "/order/create-account" &&
+        breadcrumb.getAttribute("href") === "/order/signin"
+      ) {
+        breadcrumb.classList.add("active");
+
+        key = true;
+      }
+
+      if (
+        (pathname === "/order/customize" || pathname === "/order/premade") &&
+        breadcrumb.getAttribute("href") === "/order/choose"
+      ) {
+        breadcrumb.classList.add("active");
+
+        key = true;
+      }
 
       if (breadcrumb.getAttribute("href") === pathname) {
-        if (breadcrumb.classList.contains("inactive")) {
-          breadcrumb.classList.remove("inactive");
-        }
+        key = true;
 
         breadcrumb.classList.add("active");
       }

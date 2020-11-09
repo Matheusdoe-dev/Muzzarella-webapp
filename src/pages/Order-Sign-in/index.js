@@ -33,7 +33,7 @@ const OrderSignIn = () => {
       <OrderSignInWrapper>
         <Container>
           <Row>
-            <Col xs="12" sm={{ span: 6, offset: 3 }}>
+            <Col xs="12" md={{ span: 6, offset: 3 }}>
               <form
                 name="signin"
                 id="signin"
@@ -57,7 +57,7 @@ const OrderSignIn = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs="12" sm={{ span: 3, offset: 3 }}>
+            <Col xs="12" md={{ span: 3, offset: 3 }}>
               <SubmitButton
                 form="signin"
                 type="submit"
@@ -67,13 +67,13 @@ const OrderSignIn = () => {
                 Sign in
               </SubmitButton>
             </Col>
-            <Col xs="12" sm="3">
+            <Col xs="12" md="3">
               <Button
                 background="var(--support-color-1)"
                 color="var(--support-color-4)"
                 to="/order/create-account"
               >
-                Create a account
+                Sign up
               </Button>
             </Col>
           </Row>

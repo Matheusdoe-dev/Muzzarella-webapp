@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+// hoos
+import { useHistory } from "react-router-dom";
 // components
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
@@ -17,16 +19,32 @@ import { OrderContext } from "../../hooks/order";
 const OrderCheckout = () => {
   const orderContext = useContext(OrderContext);
 
+  const history = useHistory();
+
   return (
     <>
       <Header />
       <PageTitle background={pageTitleImg} title="Checkout" />
       <Breadcrumbs />
 
-      <CheckoutWrapper onSubmit={orderContext.handleSubmitOrder}>
+      <CheckoutWrapper
+        onSubmit={async (event) => {
+          event.preventDefault();
+
+          await orderContext
+            ?.handleSubmitOrder()
+            .then(() => {
+              alert("Order created, thanks to use our services!");
+              history.push("/order/end");
+            })
+            .catch(() => {
+              alert("Unable to create order, try again.");
+            });
+        }}
+      >
         <Container>
           <Row>
-            <Col xs="12" sm="5">
+            <Col xs="12" md="6">
               <Input
                 name="card-number"
                 label="Card Number"
@@ -60,7 +78,7 @@ const OrderCheckout = () => {
                 </Col>
               </Row>
             </Col>
-            <Col xs="12" sm={{ span: 6, offset: 1 }}>
+            <Col xs="12" md="6">
               <Row>
                 <Col xs="6">
                   <Input

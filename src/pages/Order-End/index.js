@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
-import Breadcrumbs from "../../components/Breadcrumbs/index";
 // styled-components
 import { OrderEndWrapper } from "./styles";
 // imgs
@@ -15,7 +14,6 @@ const OrderCheckout = () => {
     <>
       <Header />
       <PageTitle background={pageTitleImg} title="Thanks!" />
-      <Breadcrumbs />
 
       <OrderEndWrapper>
         <Container>

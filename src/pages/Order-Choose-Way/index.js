@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 // components
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
@@ -10,11 +10,12 @@ import { ChooseWrapper } from "./styles";
 import { Button } from "../../styles/objects/button";
 // imgs
 import pageTitleImg from "../../assets/imgs/order/bg-page-customization-way.jpg";
-// hooks
-import useOrderHook from "../../hooks/order";
+// contexts
+import { OrderContext } from "../../hooks/order";
 
 const ChooseWay = () => {
-  const { handleOrderWay, orderWay } = useOrderHook();
+  // contexts
+  const orderContext = useContext(OrderContext);
 
   return (
     <>
@@ -32,7 +33,7 @@ const ChooseWay = () => {
               <Button
                 background="var(--base-color)"
                 color="var(--support-color-1)"
-                onClick={handleOrderWay}
+                onClick={orderContext?.handleOrderWay}
                 to="/order/customize"
               >
                 Customize your order
@@ -41,7 +42,7 @@ const ChooseWay = () => {
               <Button
                 background="var(--support-color-1)"
                 color="var(--support-color-4)"
-                onClick={handleOrderWay}
+                onClick={orderContext?.handleOrderWay}
                 to="/order/premade"
               >
                 Select premade options

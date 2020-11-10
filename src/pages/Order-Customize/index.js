@@ -6,6 +6,7 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import SEO from "../../components/SEO";
 // styled-components
 import { OrderCustomizeWrapper } from "./styles";
 import { SubmitButton } from "../../styles/objects/button";
@@ -18,6 +19,8 @@ const OrderCustomize = () => {
 
   return (
     <>
+      <SEO title="Customize Order" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Choose a premade option" />
       <Breadcrumbs />

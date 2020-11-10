@@ -7,6 +7,7 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import CTASection from "../../components/CTA-Section/index";
 import Footer from "../../components/Footer/index";
+import SEO from "../../components/SEO";
 // styled-components
 import { FooterImg, CustomizationSection } from "./styles";
 // imgs
@@ -19,6 +20,8 @@ import option4 from "../../assets/imgs/customization-img-topping.jpg";
 const Menu = () => {
   return (
     <>
+      <SEO title="Menu" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Menu" />
 

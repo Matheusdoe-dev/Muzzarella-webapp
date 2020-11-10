@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
+import SEO from "../../components/SEO";
 // styled-components
 import { FooterImg, AboutUsSection } from "./styles";
 // imgs
@@ -16,6 +17,8 @@ import ourValuesImg from "../../assets/imgs/about-us-img-2.jpg";
 const AboutUs = () => {
   return (
     <>
+      <SEO title="About us" description="About our values and mission" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="About us" />
 

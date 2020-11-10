@@ -8,6 +8,7 @@ import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Slides from "../../components/Slides/index";
 import Card from "../../components/Card";
+import SEO from "../../components/SEO";
 // styled-components
 import { FooterImg, OurFeaturesSection } from "./styles";
 // imgs
@@ -19,6 +20,8 @@ import featureImg3 from "../../assets/imgs/feature-img-3.jpg";
 const AboutMuzzarella = () => {
   return (
     <>
+      <SEO title="About Muzzarella" description="A bit about our history." />
+
       <Header />
       <PageTitle background={pageTitleImg} title="About Muzzarella" />
 

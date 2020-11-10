@@ -5,6 +5,7 @@ import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import SEO from "../../components/SEO";
 // styled-components
 import { ChooseWrapper } from "./styles";
 import { Button } from "../../styles/objects/button";
@@ -19,6 +20,8 @@ const ChooseWay = () => {
 
   return (
     <>
+      <SEO title="Choose Order Way" />
+
       <Header />
       <PageTitle
         background={pageTitleImg}

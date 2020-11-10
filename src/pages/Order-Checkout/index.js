@@ -8,6 +8,7 @@ import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
 import Input from "../../components/Input";
+import SEO from "../../components/SEO";
 // styled-components
 import { CheckoutWrapper, Checkmark } from "./styles";
 import { SubmitButton } from "../../styles/objects/button";
@@ -23,6 +24,8 @@ const OrderCheckout = () => {
 
   return (
     <>
+      <SEO title="Checkout" description="Confirm your order" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Checkout" />
       <Breadcrumbs />

@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
+import SEO from "../../components/SEO";
 // styled-components
 import { OrderEndWrapper } from "./styles";
 // imgs
@@ -12,6 +13,11 @@ import pageTitleImg from "../../assets/imgs/order/bg-page-end.jpg";
 const OrderCheckout = () => {
   return (
     <>
+      <SEO
+        title="Thanks!"
+        description="Thanks to consume our services, you're welcome"
+      />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Thanks!" />
 

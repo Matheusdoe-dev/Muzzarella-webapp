@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import React, { useState, createContext } from "react";
 // apis
 import muzzarellaApi from "../services/muzzarella-api";

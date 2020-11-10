@@ -6,6 +6,7 @@ import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
 import Input from "../../components/Input";
+import SEO from "../../components/SEO";
 // styled-components
 import { OrderSignInWrapper } from "./styles";
 import { SubmitButton } from "../../styles/objects/button";
@@ -33,6 +34,8 @@ const OrderSignIn = () => {
 
   return (
     <>
+      <SEO title="Create Account" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Sign in" />
       <Breadcrumbs />

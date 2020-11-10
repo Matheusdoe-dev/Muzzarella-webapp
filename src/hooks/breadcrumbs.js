@@ -1,15 +1,21 @@
+// hooks
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
+// breadcrumbs custom hooks
 const useBreadcrumbs = () => {
   const history = useHistory();
 
+  // destructuring pathname from history
   const { pathname } = history.location;
 
   useEffect(() => {
+    // selecting all breadcrumbs and creating Arry from Nodelist that will be returned
     const breadcrumbs = Array.from(
       document.querySelectorAll('[data-anime="breadcrumbs"]')
     );
+
+    // a boolean key to stop the inactive class remotion from breadcrumbs when a breadcrumb is active.
     let key = false;
 
     breadcrumbs.forEach((breadcrumb, index) => {

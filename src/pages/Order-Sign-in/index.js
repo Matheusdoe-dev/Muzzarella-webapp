@@ -1,11 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 // components
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/index";
 import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
+import SEO from "../../components/SEO";
 import Input from "../../components/Input";
 // styled-components
 import { OrderSignInWrapper } from "./styles";
@@ -26,6 +26,8 @@ const OrderSignIn = () => {
 
   return (
     <>
+      <SEO title="Sign in" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Sign in" />
       <Breadcrumbs />

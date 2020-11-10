@@ -14,6 +14,7 @@ import { OrderLocationWrapper } from "./styles";
 import pageTitleImg from "../../assets/imgs/order/bg-page-location.jpg";
 // hooks
 import useLocationHook from "../../hooks/location";
+import SEO from "../../components/SEO";
 
 const OrderLocation = () => {
   const { location, setLocation } = useLocationHook();
@@ -26,6 +27,8 @@ const OrderLocation = () => {
 
   return (
     <>
+      <SEO title="Check location" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Check your location" />
 

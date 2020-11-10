@@ -6,6 +6,7 @@ import PageTitle from "../../components/Page-title/index";
 import Footer from "../../components/Footer/index";
 import Breadcrumbs from "../../components/Breadcrumbs/index";
 import PremadeOption from "../../components/Premade-option";
+import SEO from "../../components/SEO";
 // styled-components
 import { ChoosePremadeWrapper } from "./styles";
 import { Button } from "../../styles/objects/button";
@@ -23,6 +24,8 @@ import premadeVegetarian from "../../assets/imgs/order/premade-vegetarian.jpg";
 const ChoosePremade = () => {
   return (
     <>
+      <SEO title="Premade options" />
+
       <Header />
       <PageTitle background={pageTitleImg} title="Choose a premade option" />
       <Breadcrumbs />

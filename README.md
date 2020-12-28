@@ -12,6 +12,14 @@ This is a API REST for Muzzarella web application
 
 ## Get Started
 
+Install dependencies:
+
+```
+yarn
+
+npm install
+```
+
 Development:
 
 ```sh

@@ -1,64 +1,34 @@
-# Muzzarella
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-> A institutional application with an order system to a pizza delivery.
+## Getting Started
 
-![Repo Size][repo-size]
-![Top Languages][top-languages]
-![Repo License][repo-license]
-![Repo Version][repo-version]
-![Personal Site][matheus-img]
+First, run the development server:
 
-## Get Started
-
-Development:
-
-```sh
-npm start
-
-yarn start
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-Build:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```sh
-npm run build
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-yarn build
-```
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## About
+## Learn More
 
-<ul>
-    <li>A pizza delivery institutional application with an order system</li>
-    <li>Made with React.js, Styled-components, React-Bootstrap and Axios</l>
-</ul>
+To learn more about Next.js, take a look at the following resources:
 
-### Technologies
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-<ul>
-  <li><a href="https://reactjs.org/">React.js</a></li>
-  <li><a href="https://react-bootstrap.github.io/">React-BootStrap</a></li>
-  <li><a href="https://styled-components.com/">Styled-Components</a></li>
-  <li><a href="https://github.com/axios/axios">Axios</a></li>
-</ul>
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Meta
+## Deploy on Vercel
 
-Author: Matheus do É Santos – [Linkedin](https://www.linkedin.com/in/matheusdoe-dev/)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-
-[top-languages]: https://img.shields.io/github/languages/top/Matheusdoe-dev/Muzzarella?style=flat-square
-[repo-size]: https://img.shields.io/github/repo-size/Matheusdoe-dev/Muzzarella?style=flat-square
-[repo-license]: https://img.shields.io/github/license/Matheusdoe-dev/Muzzarella?style=flat-square
-[repo-version]: https://img.shields.io/github/package-json/v/Matheusdoe-dev/Muzzarella?style=flat-square
-[matheus-img]: https://img.shields.io/badge/-matheusdoe.dev-%23811662?style=flat-square
-[matheus-url]: https://matheusdoe.dev
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

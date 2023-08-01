@@ -1,0 +1,68 @@
+@import "../../styles/settings/colors";
+@import "../../styles/settings/fonts";
+
+.intro {
+  background-image: url("../../../public/assets/images/bg-main.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introTitle {
+  color: $support-1;
+  text-align: center;
+
+  font-family: $primary-font;
+  font-size: 72px;
+  line-height: 1.1em;
+  margin-bottom: 16px;
+}
+
+.introText {
+  color: $support-2;
+  text-align: center;
+
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 1.5em;
+  max-width: 30rem;
+}
+
+.deliverySystem {
+  background-color: $support-1;
+  width: 100%;
+}
+
+.deliverySystemContainer {
+  padding: 128px 0;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  column-gap: 24px;
+  align-items: center;
+}
+
+.deliverySystemTitle {
+  color: $base-color;
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 1.4em;
+
+  margin-bottom: 24px;
+}
+
+.deliverySystemText {
+  color: $base-color;
+
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 21px;
+  max-width: 30em;
+}

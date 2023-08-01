@@ -1,0 +1,36 @@
+@import "./settings/fonts";
+
+@mixin resetSpacings() {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  @include resetSpacings();
+
+  * {
+    @include resetSpacings();
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $primary-font;
+  }
+
+  p {
+    font-family: $secondary-font;
+  }
+}

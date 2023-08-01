@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component should have four navigation options 1`] = `
+<nav
+  data-testid="navbar"
+>
+  <ul
+    class="navbar-list"
+  >
+    <li
+      data-testid="navbar-option"
+    >
+      <a
+        class="navbar-list__option false"
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      data-testid="navbar-option"
+    >
+      <a
+        class="navbar-list__option false"
+        href="/menu"
+      >
+        Menu
+      </a>
+    </li>
+    <li
+      data-testid="navbar-option"
+    >
+      <a
+        class="navbar-list__option false"
+        href="/about"
+      >
+        About
+      </a>
+    </li>
+    <li
+      data-testid="navbar-option"
+    >
+      <a
+        class="navbar-list__option false"
+        href="/faq"
+      >
+        FAQ
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

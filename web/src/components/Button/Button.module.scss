@@ -1,0 +1,28 @@
+@import "../../styles/settings/colors";
+@import "../../styles/settings/fonts";
+
+.button {
+  border-radius: 50px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+  background: $base-color;
+  border: none;
+  max-width: 272px;
+  width: 100%;
+  padding: 16px;
+  color: $support-1;
+  font-family: $primary-font;
+  font-size: 18px;
+  line-height: 1.1em;
+  transition: 0.3s;
+
+  &:hover {
+    background: $base-color-2;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+}

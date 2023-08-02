@@ -1,0 +1,35 @@
+@import "../../styles/settings/colors";
+@import "../../styles/settings/fonts";
+@import "../../styles/objects/container";
+
+.ctaSection {
+  background: $secondary-color;
+  padding: 128px 0;
+  width: 100%;
+}
+
+.ctaSectionContainer {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ctaSectionInfoTitle {
+  margin-bottom: 24px;
+
+  color: $support-4;
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 1.1em;
+}
+
+.ctaSectionInfoText {
+  color: $support-4;
+
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 1.4em;
+  max-width: 30em;
+}

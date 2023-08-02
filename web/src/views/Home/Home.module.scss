@@ -1,5 +1,6 @@
 @import "../../styles/settings/colors";
 @import "../../styles/settings/fonts";
+@import "../../styles/objects/container";
 
 .intro {
   background-image: url("../../../public/assets/images/bg-main.jpg");
@@ -36,12 +37,11 @@
 .deliverySystem {
   background-color: $support-1;
   width: 100%;
+  padding: 128px 0;
 }
 
 .deliverySystemContainer {
-  padding: 128px 0;
-  max-width: 1180px;
-  margin: 0 auto;
+  @include container;
 
   display: grid;
   grid-template-columns: 7fr 5fr;

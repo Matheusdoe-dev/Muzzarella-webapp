@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import { CTASection } from "@/components";
+
 import styles from "./Home.module.scss";
 
 const Home = () => {
@@ -39,21 +42,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div>
-          <article>
-            <h2>Order your pizza now!</h2>
-            <p>
-              Is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make
-            </p>
-          </article>
-
-          <button>Order now</button>
-        </div>
-      </section>
+      <CTASection />
     </div>
   );
 };

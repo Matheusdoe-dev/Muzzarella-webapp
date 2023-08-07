@@ -6,7 +6,7 @@ const Logo = () => {
       src="/assets/icons/brand.svg"
       alt="Muzzarella"
       data-testid="logo"
-      width={216}
+      width={160}
       height={24}
     />
   );

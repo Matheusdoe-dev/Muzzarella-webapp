@@ -1,0 +1,10 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+@mixin navOption() {
+  color: $support-1;
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 1.1rem;
+  letter-spacing: 0.1px;
+}

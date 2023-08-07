@@ -1,19 +1,4 @@
-@import "../../styles/settings/colors";
-@import "../../styles/settings/fonts";
-
-.navbar-list {
+.navbarList {
   display: flex;
   column-gap: 24px;
-}
-
-.navbar-list__option {
-  color: $support-1;
-  font-family: $secondary-font;
-  font-size: 14px;
-  line-height: 1.1rem;
-  letter-spacing: 0.1px;
-}
-
-.navbar-list__option--active {
-  color: $secondary-color;
 }

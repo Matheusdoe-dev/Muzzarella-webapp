@@ -1,0 +1,19 @@
+@import "../../styles/settings/colors";
+@import "../../styles/objects/navOption";
+
+@mixin hover-and-active-style() {
+  color: $secondary-color;
+}
+
+.navbarListOption {
+  @include navOption;
+
+  &:hover {
+    @include hover-and-active-style;
+  }
+}
+
+.navbarListOptionActive {
+  @include hover-and-active-style;
+  transition: 0.3s;
+}
